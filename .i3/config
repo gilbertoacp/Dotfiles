@@ -102,16 +102,16 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 " 1 "	
-set $ws2 " 2 "
-set $ws3 " 3 "
-set $ws4 " 4 "
-set $ws5 " 5 "
-set $ws6 " 6 "
-set $ws7 " 7 "
-set $ws8 " 8 "
-set $ws9 " 9 "
-set $ws10 " 10 "
+set $ws1 "1"	
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -173,7 +173,7 @@ bindsym $mod+r mode "resize"
 
 # Color variables
 set $bg-color            #000000
-set $inactive-bg-color   #212c27
+set $inactive-bg-color   #000000
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
@@ -224,7 +224,7 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-exec_always feh --bg-scale /home/gilberto/Pictures/img04.jpg
+exec_always feh --bg-scale /home/gilberto/Pictures/img03.jpg
 
 exec_always picom -f
 
@@ -233,8 +233,8 @@ exec_always picom -f
 #############################
 
 # Set inner/outer gaps
-gaps inner 14
-gaps outer -2
+gaps inner 10
+gaps outer -4
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
@@ -248,7 +248,11 @@ smart_gaps on
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
 smart_borders on
 
-# Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
+# Press $mod+Shift+g to enter the gap mode. 
+# Choose o or i for modifying outer/inner gaps.
+# Press one of + / - (in-/decrement for current workspace) 
+# or 0 (remove gaps for current workspace). If you also press Shift 
+# with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
 set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
@@ -285,7 +289,7 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-### end i3-gaps configuration ###
+# End of i3-gaps conf
 
 # border windows windows
 for_window [class="^.*"] border pixel 0
