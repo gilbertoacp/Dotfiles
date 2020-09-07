@@ -50,6 +50,8 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 ### and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+### keyboard settings es
+exec setxkbmap es
 
 ### Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -60,10 +62,13 @@ floating_modifier $mod
 font xft:URWGothic-Book 11
 
 ### Background
-exec_always feh --bg-scale /home/gilberto/wallpapers/img05.jpg
+exec_always feh --bg-scale /home/gilberto/wallpapers/img04.png
 
 ### Fade effect
 exec_always picom -f
+
+### PolyBar
+exec polybar example -r
 
 # =========================================================
 # ======  End of Declare Variables & Some settings  =======
@@ -88,7 +93,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
 
 ### start a terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec alacritty
 
 ### kill focused window
 bindsym $mod+Shift+q kill
@@ -221,10 +226,11 @@ mode "resize" {
 ### window colors
 ###                       border              background         text                 indicator
 
-client.focused          #2c3036                #666            $text-color          #00ff00
-client.unfocused        #ffffff                $inactive-text-color $inactive-text-color #00ff00
+client.focused          #000000                #405780            $text-color          #00ff00
+client.unfocused        #000000                $inactive-text-color $inactive-text-color #00ff00
 client.focused_inactive #fff                $inactive-bg-color   $inactive-text-color #00ff00
 client.urgent           $urgent-bg-color    $urgent-bg-color     $text-color          #00ff00
+
 
 hide_edge_borders none
 
@@ -247,27 +253,3 @@ gaps outer -2
 smart_borders on
 
 # ======  End of Windows Settings  =======
-
-
-# =====================================
-# =           Workspace Bar           =
-# =====================================
-
-### Start i3bar to display a workspace bar (plus the system information i3status
-### finds out, if available)
-bar {
-        status_command ~/.config/bumblebee-status/bumblebee-status -t iceberg-rainbow -m traffic disk datetime system 
-        font pango:Inconsolata 12
-                                colors {
-                background #000000
-                separator #fff
-                #                  border             background         text
-                focused_workspace  #0000ff            #0000ff            #ffffff
-                inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-                urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-        }
-        position top
-}
-
-
-# ======  End of Workspace Bar  =======
