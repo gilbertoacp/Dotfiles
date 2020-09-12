@@ -173,7 +173,7 @@ bindsym $mod+r mode "resize"
 bindsym $mod+shift+x exec i3lock --color "$bg-color"
 
 ### Menu Launcher 
-bindsym $mod+d exec rofi -show drun -theme Arc-Dark
+bindsym $mod+d exec rofi -show drun 
 
 # ======  End of Key Binding  =======
 
@@ -223,8 +223,14 @@ for_window [class="^.*"] border pixel 2
 for_window [urgent=latest] focus
 for_window [class="Yad"] floating enable
 
-assign [class="Firefox"] $ws1
+assign [class="firefox"] $ws1
 assign [class="Nautilus"] $ws4
+assign [class="Thunderbird"] $ws3
+assign [class="code"] $ws2
+assign [class="Alacritty"] $ws2
+assign [class="Terminator"] $ws2
+assign [class="steam"] $ws6
+assign [class="discord"] $ws3
 
 # Set inner/outer gaps
 gaps inner 10
