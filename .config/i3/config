@@ -94,7 +94,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
 
 ### start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec terminator
 
 ### kill focused window
 bindsym $mod+Shift+q kill
@@ -185,7 +185,7 @@ bindsym $mod+r mode "resize"
 bindsym $mod+shift+x exec i3lock --color "$bg-color"
 
 ### Menu Launcher 
-bindsym $mod+d exec rofi -show drun -theme /home/gilberto/.config/rofi/themes/slate.rasi 
+bindsym $mod+d exec rofi -show drun -theme Arc-Dark 
 
 # ======  End of Key Binding  =======
 
