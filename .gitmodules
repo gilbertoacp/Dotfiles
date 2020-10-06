@@ -1,6 +1,0 @@
-[submodule "bumblebee-status"]
-	path = bumblebee-status
-	url = https://github.com/tobi-wan-kenobi/bumblebee-status
-[submodule ".config/awesome"]
-	path = .config/awesome
-	url = https://github.com/ChrisTitusTech/material-awesome
