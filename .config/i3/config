@@ -63,7 +63,7 @@ floating_modifier $mod
 font xft:URWGothic-Book 11
 
 ### Background
-exec_always feh --bg-scale ~/.config/i3/wallpapers/wallpaper03.png
+exec_always feh --bg-scale ~/.config/i3/wallpapers/wallpaper04.jpg
 
 ### Fade effect
 exec_always picom -f
@@ -94,7 +94,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
 
 ### start a terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec alacritty
 
 ### kill focused window
 bindsym $mod+Shift+q kill
@@ -145,6 +145,9 @@ bindsym $mod+space focus mode_toggle
 
 ### focus the parent container
 bindsym $mod+a focus parent
+
+### open browser
+bindsym $mod+b exec brave
 
 ### focus the child container
 ###bindsym $mod+d focus child
@@ -234,6 +237,7 @@ hide_edge_borders none
 for_window [class="^.*"] border pixel 2 
 for_window [urgent=latest] focus
 for_window [class="Yad"] floating enable
+for_window [title="Android Emulator - emulador:5554"] floating enable
 for_window [title="Android Emulator - emulador:5584"] floating enable
 
 assign [class="firefox"] $ws1
