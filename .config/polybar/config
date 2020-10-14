@@ -1,21 +1,3 @@
-;==========================================================
-;
-;
-;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
-;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
-;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
-;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
-;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
-;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-;
-;
-;   To learn more about how to configure Polybar
-;   go to https://github.com/polybar/polybar
-;
-;   The README contains a lot of information
-;
-;==========================================================
-
 [colors]
 ;background = ${xrdb:color0:#222}
 background = #330e1839
@@ -24,13 +6,13 @@ background-alt = #330e1839
 foreground = #ffffff
 foreground-alt = #ffffff
 primary = #3dffff 
-secondary = #e60053
+secondary = #b3f542
 alert = #bd2c40
 
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 27
+height = 28
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0
@@ -60,11 +42,13 @@ font-5 = Font Awesome 5 Brands:pixelsize=12;2
 
 modules-left = i3
 modules-center = xwindow
-modules-right = alsa xkeyboard memory cpu filesystem temperature date powermenu
+modules-right = pulseaudio xkeyboard memory cpu filesystem temperature date powermenu
 
-separator = |
+separator =
 
-tray-position = right
+underline-size = 2
+
+tray-position = none
 tray-padding = 2
 ;tray-background = #0063ff
 
@@ -111,6 +95,7 @@ mount-0 = /
 label-mounted =  %free%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
+label-mounted-underline = ${colors.primary}
 
 [module/bspwm]
 type = internal/bspwm
@@ -161,11 +146,11 @@ label-mode-background = ${colors.primary}
 label-focused = %icon%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
-label-focused-padding = 2
+label-focused-padding = 4
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %icon%
-label-unfocused-padding = 2
+label-unfocused-padding = 4
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %icon%
@@ -176,7 +161,7 @@ label-visible-padding = ${self.label-focused-padding}
 ; urgent = Workspace with urgency hint set
 label-urgent = %icon%
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-padding = 4
 
 ; Separator in between workspaces
 ; label-separator = |
@@ -219,9 +204,9 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = ""
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+format-underline = ${colors.secondary}
 label = %percentage:2%%
 
 [module/memory]
@@ -282,7 +267,7 @@ time-alt = %H:%M:%S
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+format-underline = ${colors.primary}
 
 label =  %date% %time%
 
@@ -290,18 +275,20 @@ label =  %date% %time%
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
+label-volume = 
 label-volume-foreground = ${root.foreground}
+;label-volume-underline = ${colors.primary}
 
-label-muted = 🔇 muted
-label-muted-foreground = #666
+label-muted =  muted
+label-muted-foreground = ${colors.foreground-alt}
+label-muted-underline = ${colors.primary}
 
 bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-0 = ${colors.primary}
+bar-volume-foreground-1 = ${colors.primary}
+bar-volume-foreground-2 = ${colors.primary}
+bar-volume-foreground-3 = ${colors.primary}
+bar-volume-foreground-4 = ${colors.primary}
 bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
 bar-volume-gradient = false
@@ -380,7 +367,7 @@ thermal-zone = 0
 warn-temperature = 60
 
 format = <ramp> <label>
-format-underline = #f50a4d
+format-underline = ${colors.secondary}
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 
@@ -402,25 +389,18 @@ format-spacing = 1
 
 label-open = 
 label-open-foreground = #ffffff
-label-close =  cancel
+label-close =  Cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
 
-menu-0-0 = reboot
-menu-0-0-exec = menu-open-1
-menu-0-1 = power off
-menu-0-1-exec = menu-open-2
+menu-0-0 = Reboot
+menu-0-0-exec = systemctl reboot
+menu-0-1 = Power Off
+menu-0-1-exec = systemctl poweroff
 
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
+format-underline = ${colors.secondary}
 
-menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
-menu-2-1 = cancel
-menu-2-1-exec = menu-open-0
 
 [settings]
 screenchange-reload = true
