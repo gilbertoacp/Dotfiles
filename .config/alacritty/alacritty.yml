@@ -12,15 +12,11 @@ window:
 scrolling:
   history: 5000
 
-  font:
+font:
+  normal:
     family: MesloLGS NF
-
     style: Regular
-    size: 10.0
-
-  offset:
-    x: 6
-    y: 6
+  size: 10
 
 colors:
   # Default colors
@@ -51,7 +47,7 @@ colors:
     white: "#ffffff"
 
 
-background_opacity: 1.0
+background_opacity: 0.95
 
 key_bindings:
   - { key: V,        mods: Control|Shift, action: Paste            }
