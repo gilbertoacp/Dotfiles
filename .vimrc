@@ -8,7 +8,7 @@ set ruler
 set encoding=utf-8
 set showmatch
 set sw=2
-" set relativenumber
+set relativenumber
 set laststatus=2
 
 call plug#begin('~/.vim/plugged')
@@ -21,9 +21,31 @@ Plug 'leafgarland/typescript-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'vim-airline/vim-airline'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 let mapleader=" "
+
+" enable tabline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline#extensions#tabline#right_sep = ''
+let g:airline#extensions#tabline#right_alt_sep = ''
+"
+" " enable powerline fonts
+let g:airline_powerline_fonts = 1
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+"
+" " Switch to your current theme
+let g:airline_theme = 'onedark'
+"
+" " Always show tabs
+set showtabline=2
+"
+" " We don't need to see things like -- INSERT -- anymore
+set noshowmode
 
 " nerdtree
 let NERDTreeQuitOnOpen=1
@@ -36,18 +58,6 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
-let g:javascript_conceal_function             = "ƒ"
-let g:javascript_conceal_null                 = "ø"
-let g:javascript_conceal_this                 = "@"
-let g:javascript_conceal_return               = "⇚"
-let g:javascript_conceal_undefined            = "¿"
-let g:javascript_conceal_NaN                  = "ℕ"
-let g:javascript_conceal_prototype            = "¶"
-let g:javascript_conceal_static               = "•"
-let g:javascript_conceal_super                = "Ω"
-let g:javascript_conceal_arrow_function       = "⇒"
-let g:javascript_conceal_noarg_arrow_function = "🞅"
-let g:javascript_conceal_underscore_arrow_function = "🞅"
 
 inoremap {<CR> {<CR>}<Esc>ko
 inoremap [<CR> [<CR>]<Esc>ko

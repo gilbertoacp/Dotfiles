@@ -68,7 +68,7 @@ font xft:URWGothic-Book 11
 exec_always feh --bg-scale ~/.config/i3/wallpapers/wallpaper04.jpg
 
 ### Fade effect
-exec_always picom -f
+exec picom
 
 ### Polybar
 exec_always --no-startup-id $HOME/.config/polybar/scripts/launch.sh
@@ -264,7 +264,7 @@ assign [class="Sublime_text"] $ws2
 assign [class="Mysql-workbench-bin"] $ws2
 
 # Set inner/outer gaps
-gaps inner 15
+gaps inner 5
 gaps outer 5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
