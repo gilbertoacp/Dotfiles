@@ -42,7 +42,7 @@ font-5 = Font Awesome 5 Brands:pixelsize=12;2
 
 modules-left = i3
 modules-center = xwindow 
-modules-right = pulseaudio filesystem temperature date powermenu
+modules-right = pulseaudio loadavg  pacman-updates  weather filesystem date powermenu
 
 separator =
 
@@ -95,7 +95,7 @@ mount-0 = /
 label-mounted =  %free%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
-label-mounted-underline = ${colors.primary}
+label-mounted-underline = ${colors.secondary}
 
 [module/bspwm]
 type = internal/bspwm
@@ -136,6 +136,7 @@ ws-icon-1 = 2;
 ws-icon-2 = 3;
 ws-icon-3 = 4;
 ws-icon-4 = 5;
+ws-icon-5 = 6;
 ws-icon-default = 
 
 label-mode-padding = 2
@@ -259,13 +260,13 @@ format-disconnected =
 type = internal/date
 interval = 1
 
-date = " %Y-%m-%d"
-date-alt = " %Y-%m-%d"
+date = "%d/%m/%Y"
+date-alt = "%d/%m/%Y"
 
-time = %H:%M
+time = %H:%M:%S
 time-alt = %H:%M:%S
 
-format-prefix = 
+format-prefix =
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = ${colors.primary}
 
@@ -275,6 +276,7 @@ label =  %date% %time%
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
+format-underline = ${colors.secondary}
 label-volume = 
 label-volume-foreground = ${root.foreground}
 ;label-volume-underline = ${colors.primary}
@@ -401,6 +403,28 @@ menu-0-1-exec = systemctl poweroff
 
 format-underline = ${colors.secondary}
 
+[module/weather]
+type = custom/script
+exec =  curl -s wttr.in/Buenos_Aires?format=1 | grep -o "[0-9].*"
+tail = false
+interval = 120
+format-underline = ${colors.primary}
+format-prefix = " "  
+
+[module/pacman-updates]
+type = custom/script
+exec = checkupdates | wc -l
+tail = false
+interval = 280
+format-underline = ${colors.secondary}
+format-prefix = " "
+
+[module/loadavg]
+type = custom/script
+exec = cut -d " " -f 1,2,3 /proc/loadavg 
+tail = true
+format-underline = ${colors.primary}
+format-prefix= " "
 
 [settings]
 screenchange-reload = true
