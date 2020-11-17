@@ -51,7 +51,7 @@ exec --no-startup-id nm-applet
 exec setxkbmap es
 
 ### volume icon
-exec volumeicon
+#exec volumeicon
 
 ### mouse wheel
 exec imwheel
@@ -67,8 +67,8 @@ font xft:URWGothic-Book 11
 ### Background
 exec_always feh --bg-scale ~/.config/i3/wallpapers/wallpaper04.jpg
 
-### Fade effect
-exec picom
+### Compositor
+exec picom --no-fading-openclose
 
 ### Polybar
 exec_always --no-startup-id $HOME/.config/polybar/scripts/launch.sh
@@ -149,7 +149,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 ### open browser
-bindsym $mod+b exec brave
+bindsym $mod+b exec brave-nightly
 
 ### focus the child container
 ###bindsym $mod+d focus child
@@ -247,6 +247,7 @@ for_window [urgent=latest] focus
 for_window [class="Yad"] floating enable
 for_window [title="Android Emulator - emulador:5554"] floating enable
 for_window [title="Android Emulator - emulador:5584"] floating enable
+for_window [class="Spotify"] move to workspace $ws6 # doesn't work with assign
 
 assign [class="jetbrains-studio"] $ws2
 assign [class="firefox"] $ws1
@@ -262,6 +263,9 @@ assign [class="Brave-browser"] $ws1
 assign [class="Google-chrome"] $ws1
 assign [class="Sublime_text"] $ws2
 assign [class="Mysql-workbench-bin"] $ws2
+assign [class="Slack"] $ws4
+#assign [class="spotify"] $ws6
+assign [class="Gedit"] $ws2
 
 # Set inner/outer gaps
 gaps inner 5
