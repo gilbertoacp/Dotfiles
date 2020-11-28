@@ -1,9 +1,11 @@
-###       ____ _ _ _               _           ____      _     _
-###      / ___(_) | |__   ___ _ __| |_ ___    / ___|__ _| | __| | ___ _ __ ___  _ __
-###     | |  _| | | '_ \ / _ \ '__| __/ _ \  | |   / _` | |/ _` |/ _ \ '__/ _ \| '_ \
-###     | |_| | | | |_) |  __/ |  | || (_) | | |__| (_| | | (_| |  __/ | | (_) | | | |
-###      \____|_|_|_.__/ \___|_|   \__\___/   \____\__,_|_|\__,_|\___|_|  \___/|_| |_|
-###     
+##      #   #####
+##      #  #     #
+##      #        #
+##      #   #####
+##      #        #
+##      #  #     #
+##      #   #####
+
 
 # =========================================================
 # =           Declare Variables & Some settings           =
@@ -25,7 +27,7 @@ set $ws9 "9"
 set $ws10 "10"
 
 ### Colors
-set $bg-color 	         #2f343f
+set $bg-color 	         #219DE3
 set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
@@ -41,11 +43,11 @@ font pango:System San Francisco Display 11
 
 ### xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 ### screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+#exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 ### NetworkManager is the most popular way to manage wireless networks on Linux,
 ### and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 
 ### keyboard settings es
 exec setxkbmap es
@@ -65,10 +67,10 @@ floating_modifier $mod
 font xft:URWGothic-Book 11
 
 ### Background
-exec_always feh --bg-scale ~/.config/i3/wallpapers/wallpaper04.jpg
+exec_always nitrogen --restore
 
 ### Compositor
-exec picom --no-fading-openclose
+exec picom -bcCGb --no-fading-openclose --sw-opti
 
 ### Polybar
 exec_always --no-startup-id $HOME/.config/polybar/scripts/launch.sh
@@ -149,7 +151,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 ### open browser
-bindsym $mod+b exec brave-nightly
+bindsym $mod+b exec brave
 
 ### focus the child container
 ###bindsym $mod+d focus child
@@ -195,7 +197,8 @@ bindsym $mod+r mode "resize"
 bindsym $mod+shift+x exec i3lock --color "$bg-color"
 
 ### Menu Launcher 
-bindsym $mod+d exec rofi -show drun ~/.config/rofi/config.rasi
+#bindsym $mod+d exec rofi -show drun ~/.config/rofi/config.rasi
+bindsym $mod+d exec dmenu_run
 
 bindsym $mod+e exec nautilus
 # ======  End of Key Binding  =======
@@ -245,9 +248,8 @@ hide_edge_borders none
 for_window [class="^.*"] border pixel 2 
 for_window [urgent=latest] focus
 for_window [class="Yad"] floating enable
-for_window [title="Android Emulator - emulador:5554"] floating enable
-for_window [title="Android Emulator - emulador:5584"] floating enable
 for_window [class="Spotify"] move to workspace $ws6 # doesn't work with assign
+for_window [title=".*Emulator.*"] floating enable
 
 assign [class="jetbrains-studio"] $ws2
 assign [class="firefox"] $ws1
@@ -266,10 +268,10 @@ assign [class="Mysql-workbench-bin"] $ws2
 assign [class="Slack"] $ws4
 #assign [class="spotify"] $ws6
 assign [class="Gedit"] $ws2
-
+assign [class="whatsapp-nativefier-d40211"] $ws4
 # Set inner/outer gaps
-gaps inner 5
-gaps outer 5
+gaps inner 10
+gaps outer 10
 
 # Smart gaps (gaps used if only more than one container on the workspace)
 #smart_gaps on

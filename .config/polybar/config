@@ -5,7 +5,7 @@ background-alt = #330e1839
 ;foreground = ${xrdb:color7:#222}
 foreground = #ffffff
 foreground-alt = #ffffff
-primary = #3dffff 
+primary = #219DE3 
 secondary = #b3f542
 alert = #bd2c40
 
@@ -42,11 +42,11 @@ font-5 = Font Awesome 5 Brands:pixelsize=12;2
 
 modules-left = i3
 modules-center = xwindow 
-modules-right = pulseaudio loadavg  pacman-updates  weather filesystem date powermenu
+modules-right = loadavg  pacman-updates  weather date powermenu
 
 separator =
 
-underline-size = 2
+underline-size = 3
 
 tray-position = right
 tray-padding = 2
@@ -401,7 +401,7 @@ menu-0-0-exec = systemctl reboot
 menu-0-1 = Power Off
 menu-0-1-exec = systemctl poweroff
 
-format-underline = ${colors.secondary}
+format-underline = ${colors.primary}
 
 [module/weather]
 type = custom/script
@@ -416,7 +416,7 @@ type = custom/script
 exec = checkupdates | wc -l
 tail = false
 interval = 280
-format-underline = ${colors.secondary}
+format-underline = ${colors.primary}
 format-prefix = " "
 
 [module/loadavg]

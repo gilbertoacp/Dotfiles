@@ -10,6 +10,7 @@ set showmatch
 set sw=2
 set relativenumber
 set laststatus=2
+set tabstop=2
 
 call plug#begin('~/.vim/plugged')
 Plug 'easymotion/vim-easymotion'
@@ -22,33 +23,21 @@ Plug 'pangloss/vim-javascript'
 Plug 'vim-airline/vim-airline'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'vim-airline/vim-airline-themes'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
+" mapleader
 let mapleader=" "
 
-" enable tabline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = ''
-let g:airline#extensions#tabline#right_sep = ''
-let g:airline#extensions#tabline#right_alt_sep = ''
-"
-" " enable powerline fonts
-let g:airline_powerline_fonts = 1
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-"
-" " Switch to your current theme
-let g:airline_theme = 'onedark'
-"
-" " Always show tabs
+" Always show tabs
 set showtabline=2
-"
-" " We don't need to see things like -- INSERT -- anymore
-set noshowmode
 
 " nerdtree
 let NERDTreeQuitOnOpen=1
+nmap <Leader>nt :NERDTreeToggle<CR>
+
+" easymotion
+nmap <Leader>s <Plug>(easymotion-s2)
 
 " rainbow indent
 let g:rainbow_active = 1
@@ -59,10 +48,7 @@ let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
 
-inoremap {<CR> {<CR>}<Esc>ko
-inoremap [<CR> [<CR>]<Esc>ko
-inoremap (<CR> (<CR>)<Esc>ko
-
-nmap <Leader>s <Plug>(easymotion-s2)
-nmap <Leader>nt :NERDTreeToggle<CR>
-
+" airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'cool'

@@ -5,6 +5,6 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 setxkbmap es
 imwheel &
 nitrogen --restore &
-nm-applet &
-picom -f &
+picom -bcCGb --no-fading-openclose --sw-opti
+dwmblocks &
 exec dwm
