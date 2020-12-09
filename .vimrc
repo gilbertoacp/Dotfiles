@@ -2,7 +2,7 @@ set number
 set mouse=a
 set numberwidth=1
 set clipboard=unnamed
-syntax enable
+syntax on
 set showcmd
 set ruler
 set encoding=utf-8
@@ -24,7 +24,19 @@ Plug 'vim-airline/vim-airline'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
+Plug 'stanangeloff/php.vim'
+Plug 'joshdick/onedark.vim'
+Plug 'arcticicestudio/nord-vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-fugitive'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'mattn/emmet-vim'
+Plug 'othree/html5.vim'
 call plug#end()
+
+" color scheme
+"colorscheme onedark
+colorscheme nord
 
 " mapleader
 let mapleader=" "
@@ -51,4 +63,4 @@ let g:javascript_plugin_flow = 1
 " airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'cool'
+"let g:airline_theme = 'cool'
