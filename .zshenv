@@ -16,3 +16,6 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 
 # LAMPP SERVER (XAMPP)
 export PATH=$PATH:/opt/lampp/bin
+
+# Flutter 
+export PATH=$PATH:/home/gilberto/development/flutter/bin

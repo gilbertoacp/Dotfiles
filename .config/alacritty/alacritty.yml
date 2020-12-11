@@ -16,7 +16,7 @@ font:
   normal:
     family: MesloLGS NF
     style: Regular
-  size: 10
+  size: 9.5
 
 colors:
   # Default colors
@@ -47,7 +47,7 @@ colors:
     white: "#ffffff"
 
 
-background_opacity: 0.95
+background_opacity: 0.96
 
 key_bindings:
   - { key: V,        mods: Control|Shift, action: Paste            }
@@ -55,8 +55,8 @@ key_bindings:
   - { key: Insert,   mods: Shift,         action: PasteSelection   }
   - { key: Key0,     mods: Control,       action: ResetFontSize    }
   - { key: Equals,   mods: Control,       action: IncreaseFontSize }
-  - { key: Add,      mods: Control,       action: IncreaseFontSize }
-  - { key: Subtract, mods: Control,       action: DecreaseFontSize }
+  - { key: Plus,      mods: Control,       action: IncreaseFontSize }
+  - { key: NumpadSubtract, mods: Control,       action: DecreaseFontSize }
   - { key: Minus,    mods: Control,       action: DecreaseFontSize }
 
   - { key: Paste,                    action: Paste                            }
