@@ -39,7 +39,7 @@ set $refresh_i3status killall -SIGUSR1 i3status
 
 ### Font for window titles. Will also be used by the bar unless a different font
 ### is used in the bar {} block below.
-font pango:UbuntuMono Nerd Font 12
+font pango:UbuntuMono Nerd Font 10
 
 ### Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -123,7 +123,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 ### open browser
-bindsym $mod+b exec brave
+bindsym $mod+b exec firefox
 
 ### focus the child container
 ###bindsym $mod+d focus child
@@ -169,8 +169,8 @@ bindsym $mod+r mode "resize"
 bindsym $mod+shift+x exec i3lock --color "$bg-color"
 
 ### Menu Launcher 
-#bindsym $mod+d exec rofi -show drun ~/.config/rofi/config.rasi
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec rofi -show drun ~/.config/rofi/config.rasi
+#bindsym $mod+d exec dmenu_run
 
 bindsym $mod+e exec nautilus
 # ======  End of Key Binding  =======
@@ -236,10 +236,7 @@ assign [class="alacritty"] $ws3
 assign [class="Brave-browser"] $ws1
 assign [class="Google-chrome"] $ws1
 assign [class="Sublime_text"] $ws2
-assign [class="Mysql-workbench-bin"] $ws2
 assign [class="Slack"] $ws4
-#assign [class="spotify"] $ws6
-assign [class="Gedit"] $ws2
 assign [class="whatsapp-nativefier-d40211"] $ws4
 # Set inner/outer gaps
 gaps inner 9
