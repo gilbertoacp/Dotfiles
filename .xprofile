@@ -7,13 +7,19 @@ xset s noblank
 xset r rate 210 40
 
 # Compositor
-picom -bcCGb --no-fading-openclose --sw-opti &
+picom &
 
 # Keyboard Layout
 setxkbmap es &
 
 # Background Image
 nitrogen --restore &
+
+# Volume icon
+volumeicon &
+
+# nw applet
+nm-applet &
 
 # Mouse Wheel
 imwheel &
