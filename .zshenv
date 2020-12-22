@@ -19,3 +19,5 @@ export PATH=$PATH:/opt/lampp/bin
 
 # Flutter 
 export PATH=$PATH:/home/gilberto/development/flutter/bin
+
+export PATH=$HOME/.local/bin:$PATH
