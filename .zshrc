@@ -9,11 +9,12 @@ ZSH_THEME="robbyrussell"
 
 CASE_SENSITIVE="true"
 
-plugins=(git)
+plugins=(git archlinux docker)
+
+alias sail='./vendor/bin/sail'
 
 source $ZSH/oh-my-zsh.sh
-
 source ~/powerlevel10k/powerlevel10k.zsh-theme
-
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
