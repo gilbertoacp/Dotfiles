@@ -1,3 +1,5 @@
+export _JAVA_AWT_WM_NONREPARENTING=1
+
 # Stop screen from going blank
 xset s off
 xset -dpms
@@ -10,16 +12,13 @@ xset r rate 210 40
 picom &
 
 # Keyboard Layout
-setxkbmap es &
-
-# Background Image
-nitrogen --restore &
+setxkbmap us &
 
 # Volume icon
 volumeicon &
 
-# nw applet
-nm-applet &
-
-# Mouse Wheel
+# Mouse wheel 
 imwheel &
+
+# Background
+nitrogen --restore &
