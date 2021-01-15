@@ -1,27 +1,23 @@
+align=left
+separator=true
+separator_block_width=30
+command=~/.config/i3blocks/scripts/$BLOCK_NAME
+interval=1
+
+[vol]
+
+[temp]
+
+[net]
+
 [loadavg]
 command=cut -d " " -f 1,2,3 /proc/loadavg
-interval=1
 label= 
-#background=#120078
-#color=#FFFFFF
 
 [updates]
-command=checkupdates | wc -l
-interval=200
-label= 
-#background=#9d0191
-#color=#FFFFFF
+interval=500
 
 [weather]
-command=curl -s wttr.in/Buenos_Aires?format=1 | grep -o "[0-9].*"
-interval=1
-label= 
-#background=#fd3a69
-#color=#FFFFFF
+interval=120
 
-[date]
-command=date '+%b %d %H:%M'
-interval=1
-label= 
-#background=#fecd1a
-#color=#000000
+[clock]
