@@ -1,23 +1,13 @@
-# Path to oh-my-zsh installation.
+export QT_QPA_PLATFORMTHEME=gtk2
+export XDG_CURRENT_DESKTOP=Unity
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export ZSH="/home/gilberto/.oh-my-zsh"
-
-# JAVA HOME
 export JAVA_HOME=/usr/lib/jvm/default
 export PATH=$PATH:$JAVA_HOME/bin
-
-# GRADLE
 export PATH=$PATH:/opt/gradle/gradle-6.7.1/bin
-
-# ANDROID 
 export ANDROID_SDK_ROOT=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
-
-# LAMPP SERVER (XAMPP)
-export PATH=$PATH:/opt/lampp/bin
-
-# Flutter 
 export PATH=$PATH:/home/gilberto/development/flutter/bin
-
 export PATH=$HOME/.local/bin:$PATH

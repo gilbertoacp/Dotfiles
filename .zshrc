@@ -4,14 +4,23 @@ fi
 
 export ZSH="/home/gilberto/.oh-my-zsh"
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 
-plugins=(git)
+plugins=(git archlinux docker)
+
 
 source $ZSH/oh-my-zsh.sh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f ~/.aliases ]] || source ~/.aliases
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-alias sail='bash vendor/bin/sail'
+_dotnet_zsh_complete()
+{
+  local completions=("$(dotnet complete "$words")")
+
+  reply=( "${(ps:\n:)completions}" )
+}
+
+compctl -K _dotnet_zsh_complete dotnet

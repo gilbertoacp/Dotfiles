@@ -1,23 +1,21 @@
 align=left
 separator=true
 separator_block_width=30
-command=~/.config/i3blocks/scripts/$BLOCK_NAME
+command=~/.local/bin/$BLOCK_NAME
 interval=1
 
-[vol]
+[bar_vol]
 
-[temp]
+[bar_temp]
 
-[net]
+[bar_net]
 
-[loadavg]
-command=cut -d " " -f 1,2,3 /proc/loadavg
-label= 
+[bar_loadavg]
 
-[updates]
+[bar_updates]
 interval=500
 
-[weather]
+[bar_weather]
 interval=120
 
-[clock]
+[bar_clock]

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+while true; do
+	xsetroot -name "$(bar_loadavg) | $(bar_updates) | $(bar_net) | $(bar_temp) | $(bar_weather) | $(bar_vol) | $(bar_clock)"
+	sleep 1
+done

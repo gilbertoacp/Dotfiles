@@ -197,6 +197,8 @@ for_window [class="^.*"] border pixel 2
 for_window [urgent=latest] focus
 for_window [class="Spotify"] move to workspace $ws6 # doesn't work with assign
 for_window [title=".*Emulator.*"] floating enable
+for_window [class="flameshot"] floating enable 
+for_window [class="SimpleScreenRecorder"] floating enable
 
 assign [class="jetbrains-studio"] $ws2
 assign [class="firefox"] $ws1

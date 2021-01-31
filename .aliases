@@ -1,0 +1,3 @@
+alias ..='cd ..'
+alias l='ls -lha'
+alias sail='./vendor/bin/sail'
