@@ -11,5 +11,6 @@ setxkbmap es &
 volumeicon &
 
 imwheel &
+nm-applet &
 
 nitrogen --restore &
