@@ -1,0 +1,30 @@
+#!/bin/sh
+
+git clone https://github.com/robbyrussell/oh-my-zsh \
+    "$HOME/.oh-my-zsh"
+
+git clone https://github.com/zsh-users/zsh-autosuggestions \
+    ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git \
+    ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+git clone --bare --recursive https://github.com/gilbertoacp/dotfiles \
+    "$HOME/.dotfiles"
+
+function dotfiles() {
+    /usr/bin/env git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" "$@"
+}
+
+dotfiles checkout
+if [ "$?" -ne 0 ]; then
+    mkdir -p "$HOME/.dotfiles.bak"
+    dotfiles checkout 2>&1 \
+        | grep -P '^\s+[\w.]' \
+        | awk {'print $1'} \
+        | xargs -I{} sh -c 'cp -r --parents "{}" "$HOME/.dotfiles.bak/" && rm -rf "{}"'
+    dotfiles checkout
+fi
+
+dotfiles submodule update --recursive --remote
+dotfiles config --local status.showUntrackedFiles no
