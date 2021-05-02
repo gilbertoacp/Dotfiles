@@ -2,7 +2,7 @@
 export EDITOR='vim'
 
 # terminal
-export TERMINAL='alacritty'
+export TERMINAL='kitty'
 
 # makeflags
 export MAKEFLAGS="-j$(nproc)"
