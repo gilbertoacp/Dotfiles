@@ -4,9 +4,6 @@ export EDITOR='vim'
 # terminal
 export TERMINAL='kitty'
 
-# makeflags
-export MAKEFLAGS="-j$(nproc)"
-
 # qt
 export QT_STYLE_OVERRIDE=gtk2
 
