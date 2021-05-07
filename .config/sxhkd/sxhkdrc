@@ -28,7 +28,7 @@ ctrl + shift + Escape
 
 # Close and kill focused window
 super + shift +  q
-	bspc node -{c,k}
+	bspc node -k
 
 # Alternate between tiled and monacle layout
 super + m
