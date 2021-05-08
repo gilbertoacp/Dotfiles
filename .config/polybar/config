@@ -52,9 +52,9 @@ font-0 = Hack:style=Bold:size=9
 font-1 = UbuntuMono Nerd Font:style=Bold:size=10
 
 ; modules
-modules-left = i3 bspwm 
-modules-center = xwindow 
-modules-right = net load updates weather clock
+modules-left = i3 bspwm xwindow 
+modules-center =  
+modules-right = net updates weather clock
 
 underline-size = 1
 
@@ -144,11 +144,6 @@ tail = true
 [module/load]
 type = custom/script
 exec = bar_loadavg
-tail = true
-
-[module/vol]
-type = custom/script
-exec = bar_vol
 tail = true
 
 [module/temp]

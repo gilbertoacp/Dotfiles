@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-dte="$(date +"%a, %B %d %l:%M%p"| sed 's/  / /g')"
+dte="$(date +"%a, %B %d %H:%M"| sed 's/  / /g')"
 icon=""
 printf "%s %s\\n" "$icon " "$dte"
 
