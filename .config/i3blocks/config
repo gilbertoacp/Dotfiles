@@ -1,16 +1,14 @@
-align=left
+align=center
 separator=true
-separator_block_width=30
+separator_block_width=35
 command=~/.local/bin/$BLOCK_NAME
 interval=1
+color=#ABB2BF
 
-[bar_vol]
-
-[bar_temp]
+[bar_kernel]
+interval=once
 
 [bar_net]
-
-[bar_loadavg]
 
 [bar_updates]
 interval=500

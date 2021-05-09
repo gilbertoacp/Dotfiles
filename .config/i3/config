@@ -25,12 +25,12 @@ set_from_resource $inactive-bg-color i3wm.background
 set_from_resource $text-color 13wm.color4
 set_from_resource $inactive-text-color i3wm.color7
 set_from_resource $urgent-bg-color i3wm.color1
+set_from_resource $bg-primary 13wm.color4
+set_from_resource $bg-foreground 13wm.foreground
+set_from_resource $bg-background 13wm.background
+set_from_resource $bg-background-wm 13wm.color8
 
-exec_always launch-polybar
-
-set $refresh_i3status killall -SIGUSR1 i3status
-
-font pango:UbuntuMono Nerd Font Bold 10
+font pango:Hack Bold 9
 
 floating_modifier $mod
 
@@ -159,3 +159,20 @@ for_window [class="Qalculate-gtk"] floating enable
 gaps inner 5
 gaps outer 5
 smart_gaps on
+
+bar {
+  status_command i3blocks
+	position top
+	workspace_min_width 40
+	colors {
+		       background $bg-background
+	    	   separator $bg-foreground
+		        #                  border             background         text
+		        focused_workspace  $bg-background-wm         $bg-background-wm          $text-color
+         	  inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+		        urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+  }
+  font pango:UbuntuMono Nerd Font Bold 11
+  separator_symbol ""
+  height 25
+}
