@@ -5,6 +5,11 @@ command=~/.local/bin/$BLOCK_NAME
 interval=1
 color=#ABB2BF
 
+[bar_xwindow]
+color=#61AFEF
+command=xtitle -s -e -t 20
+interval=persist
+
 [bar_kernel]
 interval=once
 
