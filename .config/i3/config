@@ -26,7 +26,7 @@ set_from_resource $text-color 13wm.color4
 set_from_resource $inactive-text-color i3wm.color7
 set_from_resource $urgent-bg-color i3wm.color1
 
-exec_always launch-polybar.sh
+exec_always launch-polybar
 
 set $refresh_i3status killall -SIGUSR1 i3status
 
