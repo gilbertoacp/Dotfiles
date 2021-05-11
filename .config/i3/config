@@ -160,7 +160,7 @@ smart_gaps on
 
 bar {
   status_command i3blocks
-	position top
+	position bottom
 	workspace_min_width 40
 	colors {
 		       background $bg-background
