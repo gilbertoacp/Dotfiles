@@ -5,7 +5,7 @@ export EDITOR='vim'
 export TERMINAL='kitty'
 
 # qt
-export QT_STYLE_OVERRIDE=gtk2
+export QT_STYLE_OVERRIDE=kvantum
 
 # zsh
 export ZSH="/home/gilberto/.oh-my-zsh"
