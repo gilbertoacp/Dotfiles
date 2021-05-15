@@ -1,4 +1,0 @@
-#!/bin/bash
-weather=$(curl -s wttr.in/Colegiales?format=%t)
-icon="杖"
-printf "%s%s\n" "$icon " "$weather"
