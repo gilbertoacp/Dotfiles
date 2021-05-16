@@ -7,6 +7,8 @@ import XMonad.Hooks.DynamicLog
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
+import XMonad.Hooks.EwmhDesktops
+
 import XMonad.Util.SpawnOnce
 
 _terminal           = "kitty"
@@ -92,7 +94,7 @@ _manageHook = composeAll
     , title     =? "Android Emulator - emulator:5554"    --> doFloat
     ]
 
-_handleEventHook   = mempty
+_handleEventHook   = fullscreenEventHook
 _logHook     = return ()
 _startupHook =  return ()
 
