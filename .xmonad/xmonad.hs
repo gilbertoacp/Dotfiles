@@ -22,19 +22,12 @@ _focusedBorderColor = "#61AFEF"
 
 _keys conf@XConfig { XMonad.modMask = modm } = M.fromList $
 
-    [ 
-        ( 
-            ( modm , xK_Return ) , 
-            spawn $ XMonad.terminal conf 
-        ), 
-        (
-            ( 0, xF86XK_AudioMute ), 
-            spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle"
-        )
+    [
+      ((modm, xK_Return ), spawn $ XMonad.terminal conf)
+    , ((0, xF86XK_AudioMute ), spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle")
     , ((0, xF86XK_AudioLowerVolume), spawn "pactl set-sink-volume @DEFAULT_SINK@ -10%")
     , ((0, xF86XK_AudioRaiseVolume), spawn "pactl set-sink-volume @DEFAULT_SINK@ +10%")
     , ((modm,               xK_p     ), spawn "dmenu_run")
-    , ((modm .|. shiftMask, xK_c     ), kill)
     , ((modm,               xK_space ), sendMessage NextLayout)
     , ((modm .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf)
     , ((modm,               xK_n     ), refresh)
@@ -42,7 +35,7 @@ _keys conf@XConfig { XMonad.modMask = modm } = M.fromList $
     , ((modm,               xK_j     ), windows W.focusDown)
     , ((modm,               xK_k     ), windows W.focusUp  )
     , ((modm,               xK_m     ), windows W.focusMaster  )
-    , ((modm .|. shiftMask,               xK_Return), windows W.swapMaster)
+    , ((modm .|. shiftMask, xK_Return), windows W.swapMaster)
     , ((modm .|. shiftMask, xK_j     ), windows W.swapDown  )
     , ((modm .|. shiftMask, xK_k     ), windows W.swapUp    )
     , ((modm,               xK_h     ), sendMessage Shrink)
@@ -50,9 +43,10 @@ _keys conf@XConfig { XMonad.modMask = modm } = M.fromList $
     , ((modm,               xK_t     ), withFocused $ windows . W.sink)
     , ((modm              , xK_comma ), sendMessage (IncMasterN 1))
     , ((modm              , xK_period), sendMessage (IncMasterN (-1)))
-    , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))
-    , ((modm              , xK_q     ), spawn "xmonad --recompile; xmonad --restart")
-    , ( (modm, xK_f ) , spawn "pcmanfm" )
+    , ((modm, xK_f) , spawn "pcmanfm")
+    , ((modm .|. shiftMask, xK_q), kill)
+    , ((controlMask .|. shiftMask, xK_r), spawn "xmonad --recompile; xmonad --restart")
+    , ((controlMask .|. shiftMask, xK_Escape), io exitSuccess)
     ]
     ++
 
@@ -99,7 +93,9 @@ _logHook     = return ()
 _startupHook =  return ()
 
 _bar         = "xmobar"
-_PP          = xmobarPP { ppCurrent = xmobarColor "#429942" "" . wrap "[" "]" }
+_PP          = xmobarPP { 
+    ppCurrent = xmobarColor "#61AFEF" "" . wrap "[" "]"
+}
 
 _toggleStrutsKey XConfig { XMonad.modMask = modMask } = (modMask, xK_b)
 
