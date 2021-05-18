@@ -128,6 +128,7 @@ for_window [class="flameshot"] floating enable
 for_window [class="SimpleScreenRecorder"] floating enable
 for_window [class="Qalculate-gtk"] floating enable
 for_window [class="^.*"] border pixel 0
+for_window [class="Nitrogen"] floating enable
 for_window [title=".*Emulator.*"] floating enable
 for_window [urgent=latest] focus
 
