@@ -11,7 +11,7 @@ Config {
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
    , alignSep = "}{"  -- separator between left-right alignment
-   , template = "%StdinReader% }{ %kernel% <fc=#666>|</fc> %weather% <fc=#666>|</fc> %updates% <fc=#666>|</fc> %date%%padding%"
+   , template = "%UnsafeStdinReader% }{ %kernel% <fc=#666>|</fc> %weather% <fc=#666>|</fc> %updates% <fc=#666>|</fc> %date%%padding%"
 
    -- general behavior
    , lowerOnStart =     True    -- send to bottom of window stack on start
@@ -22,7 +22,7 @@ Config {
    , persistent =       True    -- enable/disable hiding (True = disabled)
 
    , commands = [
-        Run StdinReader, 
+        Run UnsafeStdinReader, 
         Run Date "%F (%a) %T" "date" 10,
         Run Com "trayer-padding-icon" [] "padding" 1000,
         Run Com "b-kernel" [] "kernel" 3600,
