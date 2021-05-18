@@ -85,16 +85,20 @@ _manageHook = composeAll
     , className =? "download"         --> doFloat
     , className =? "error"                   --> doFloat
     , className =? "Qalculate-gtk"           --> doFloat
+    , className =? "SimpleScreenRecorder" --> doFloat
     , title     =? "Android Emulator - emulator:5554"    --> doFloat
     ]
 
 _handleEventHook   = fullscreenEventHook
 _logHook     = return ()
-_startupHook =  return ()
+_startupHook =  do
+    spawnOnce "trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --monitor 1 --transparent true --alpha 0 --tint 0x282c34  --height 20 &"
 
 _bar         = "xmobar"
 _PP          = xmobarPP { 
-    ppCurrent = xmobarColor "#61AFEF" "" . wrap "[" "]"
+    ppCurrent = xmobarColor "#61AFEF" "" . wrap "[" "]",
+    ppTitle   = xmobarColor "#ABB2BF" "" . shorten 60,
+    ppSep = "<fc=#666> | </fc>"
 }
 
 _toggleStrutsKey XConfig { XMonad.modMask = modMask } = (modMask, xK_b)
