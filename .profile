@@ -24,5 +24,11 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 
+# dotnet
+export MSBuildSDKsPath=$( echo /usr/share/dotnet/sdk/5.*/Sdks );
+export DOTNET_ROOT=/opt/dotnet
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+export PATH=$PATH:~/.dotnet/tools
+
 # local scripts
 export PATH=$HOME/.local/bin:$PATH
