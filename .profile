@@ -30,5 +30,8 @@ export DOTNET_ROOT=/opt/dotnet
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export PATH=$PATH:~/.dotnet/tools
 
+# composer
+export PATH=$PATH:$HOME/.config/composer/vendor/bin
+
 # local scripts
 export PATH=$HOME/.local/bin:$PATH

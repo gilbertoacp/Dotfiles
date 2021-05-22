@@ -48,9 +48,9 @@ _keys conf@XConfig { XMonad.modMask = modm } = M.fromList $
     , ((modm,               xK_t     ), withFocused $ windows . W.sink)
     , ((modm              , xK_comma ), sendMessage (IncMasterN 1))
     , ((modm              , xK_period), sendMessage (IncMasterN (-1)))
-    , ((modm, xK_e) , spawn "pcmanfm")
+    , ((modm, xK_e) , spawn "thunar")
     , ((modm .|. shiftMask, xK_q), kill)
-    , ((controlMask .|. shiftMask, xK_r), spawn "xmonad --recompile; xmonad --restart")
+   -- , ((controlMask .|. shiftMask, xK_r), spawn "xmonad --recompile; xmonad --restart")
     , ((controlMask .|. shiftMask, xK_Escape), io exitSuccess)
     ]
     ++
@@ -78,11 +78,11 @@ _layout = tiled ||| Full
 
 _manageHook = composeAll
     [ className =? "Nitrogen"        --> doCenterFloat
-    , className =? "notification"    --> doFloat
-    , className =? "confirm"         --> doFloat
-    , className =? "file_progress"   --> doFloat
-    , className =? "dialog"          --> doFloat
-    , className =? "download"         --> doFloat
+    , className =? "notification"    --> doCenterFloat
+    , className =? "confirm"         --> doCenterFloat
+    , className =? "file_progress"   --> doCenterFloat
+    , className =? "dialog"          --> doCenterFloat
+    , className =? "download"         --> doCenterFloat
     , className =? "error"                   --> doCenterFloat
     , className =? "Qalculate-gtk"           --> doCenterFloat
     , className =? "SimpleScreenRecorder" --> doCenterFloat
@@ -99,8 +99,12 @@ _startupHook =  do
 _bar         = "xmobar"
 _PP          = xmobarPP {
     ppCurrent = xmobarColor "#61AFEF" "" . wrap "[" "]",
-    ppTitle   = xmobarColor "#ABB2BF" "" . shorten 60,
-    ppSep = "<fc=#666> | </fc>"
+    ppTitle   = xmobarColor "#c792ea" "" . shorten 60,
+    -- ppSep = "<fc=#666> | </fc>",
+    ppVisible = xmobarColor "#98be65" "",
+    ppHidden = xmobarColor "#13cfe8" "" . wrap "*" "",
+    -- ppHiddenNoWindows = xmobarColor "#ABB2BF" "",
+    ppUrgent = xmobarColor "#f50000" "" . wrap "!" "!"
 }
 
 _toggleStrutsKey XConfig { XMonad.modMask = modMask } = (modMask, xK_b)

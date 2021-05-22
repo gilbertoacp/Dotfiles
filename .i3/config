@@ -224,7 +224,7 @@ bindsym $mod+p \
 exec dmenu_run -nf '#F8F8F2' -nb '#282C34' -sb '#61AFEF' -sf '#F8F8F2' -fn 'monospace-10' -p 'Run'
 
 bindsym $mod+e \
-exec pcmanfm
+exec thunar
 
 bindsym $mod+Return \
 exec $TERMINAL
@@ -252,4 +252,3 @@ gaps outer 2
 smart_gaps on
 
 hide_edge_borders none
-#force_xinerama yes
