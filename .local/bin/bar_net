@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 interface=$(ip route show to default | grep -Eo "dev\s*[[:alnum:]]+" | sed 's/dev\s//g') 
 R1=`cat /sys/class/net/${interface}/statistics/rx_bytes`

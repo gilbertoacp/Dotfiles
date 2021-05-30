@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/sh 
 
 dte="$(date +"%a, %B %d %H:%M"| sed 's/  / /g')"
 icon=""
