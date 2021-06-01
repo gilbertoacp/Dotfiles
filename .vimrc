@@ -12,6 +12,8 @@ set relativenumber
 set laststatus=2
 set tabstop=2
 
+let &t_ut=''
+
 call plug#begin('~/.vim/plugged')
 
 " syntax
@@ -21,9 +23,23 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'lnl7/vim-nix'
+Plug 'stanangeloff/php.vim'
+Plug 'honza/vim-snippets'
+Plug 'neoclide/coc.nvim'
 
-" appearance
+" utils
+Plug 'scrooloose/nerdtree'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-rooter'
+
+"appearance
 Plug 'sainnhe/edge'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'joshdick/onedark.vim'
+"Plug 'ryanoasis/vim-devicons'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
@@ -31,13 +47,22 @@ if (has("termguicolors"))
 	set termguicolors
 endif
 
-let g:edge_enable_italic = 1
-let g:edge_disable_italic_comment = 1
-colorscheme edge
+" appearance
+let g:onedark_terminal_italics = 1
+let g:onedark_termcolors = 256
+let g:onedark_hide_endofbuffer = 1
 
-let &t_ut=''
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme='onedark'
+
+colorscheme onedark
+
+" utils
 let mapleader=" "
 set showtabline=2
+nnoremap <leader>nt :NERDTreeFocus<CR>
+let NERDTreeShowHidden=1
 
 " syntax 
 set conceallevel=1

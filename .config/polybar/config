@@ -22,6 +22,7 @@ height = 20
 ;offset-y = 1%
 radius = 0
 fixed-center = false
+bottom = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -119,17 +120,17 @@ format-foreground = ${colors.primary}
 
 [module/weather]
 type = custom/script
-exec = b-weather
+exec = bar_weather
 interval = 2200
 
 [module/updates]
 type = custom/script
-exec = b-updates
+exec = bar_updates
 interval = 3600
 
 [module/net]
 type = custom/script
-exec = b-net
+exec = bar_net
 tail = true
 
 [module/load]
@@ -144,11 +145,11 @@ tail = true
 
 [module/clock]
 type = custom/script
-exec = b-clock
+exec = bar_clock
 tail = true
 
 [module/kernel]
 type = custom/script
-exec = b-kernel
+exec = bar_kernel
 interval = 3600
 

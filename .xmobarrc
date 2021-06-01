@@ -25,8 +25,8 @@ Config {
         Run UnsafeStdinReader, 
         Run Date "%F (%a) %T" "date" 10,
         Run Com "trayer-padding-icon" [] "padding" 1000,
-        Run Com "b-kernel" [] "kernel" 3600,
-        Run Com "b-weather" [] "weather" 2500,
-        Run Com "b-updates" [] "updates" 3600
+        Run Com "bar_kernel" [] "kernel" 3600,
+        Run Com "bar_weather" [] "weather" 2500,
+        Run Com "bar_updates" [] "updates" 3600
      ]
 }

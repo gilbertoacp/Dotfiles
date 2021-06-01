@@ -5,4 +5,5 @@ xset r rate 210 40
 setxkbmap es &
 imwheel &
 nm-applet &
+volumeicon &
 nitrogen --restore &

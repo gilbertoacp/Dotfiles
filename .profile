@@ -11,23 +11,15 @@ export QT_STYLE_OVERRIDE=kvantum
 export ZSH="/home/gilberto/.oh-my-zsh"
 
 # java
-export JAVA_HOME=/usr/lib/jvm/default
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
 export PATH=$PATH:$JAVA_HOME/bin
 export _JAVA_AWT_WM_NONREPARENTING=1
-
-# gradle
-#export PATH=$PATH:$(echo /opt/gradle/gradle-*/bin)
 
 # android
 export ANDROID_SDK_ROOT=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
-
-# dotnet
-export MSBuildSDKsPath=$( echo /usr/share/dotnet/sdk/5.*/Sdks );
-export DOTNET_ROOT=/usr/share/dotnet
-export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 # composer
 export PATH=$PATH:$HOME/.config/composer/vendor/bin
