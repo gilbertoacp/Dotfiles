@@ -1,6 +1,6 @@
 exec_always launch-polybar
 
-font pango:UbuntuMono Nerd Font Bold 9
+font pango:UbuntuMono Nerd Font Bold 10
 
 exec_always xrdb ~/.Xresources
 
@@ -236,7 +236,7 @@ client.focused          $inactive-bg-color          $inactive-bg-color          
 client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
 client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
-#client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       $bg-background
 
 for_window [class="flameshot"] floating enable
@@ -247,8 +247,16 @@ for_window [class="Nitrogen"] floating enable
 for_window [title=".*Emulator.*"] floating enable
 for_window [urgent=latest] focus
 
-gaps inner 2
-gaps outer 2
+for_window [class="confirm"] floating enable
+for_window [class="dialog"] floating enable
+for_window [class="file_progress"] floating enable
+for_window [class="error"] floating enable
+for_window [class="download"] floating enable
+for_window [class="notification"] floating enable
+for_window [class="Pavucontrol"] floating enable
+
+gaps inner 5
+gaps outer 5
 smart_gaps on
 
 hide_edge_borders none

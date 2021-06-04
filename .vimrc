@@ -5,12 +5,13 @@ set clipboard=unnamed
 syntax enable
 set showcmd
 set ruler
-set encoding=utf-8
+set encoding=UTF-8
 set showmatch
 set sw=2
 set relativenumber
 set laststatus=2
 set tabstop=2
+set cursorline
 
 let &t_ut=''
 
@@ -32,22 +33,22 @@ Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
+Plug 'neoclide/coc.nvim'
 
 "appearance
 Plug 'sainnhe/edge'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'joshdick/onedark.vim'
-"Plug 'ryanoasis/vim-devicons'
 Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
+" appearance
 if (has("termguicolors"))
-	set termguicolors
+  set termguicolors
 endif
 
-" appearance
 let g:onedark_terminal_italics = 1
 let g:onedark_termcolors = 256
 let g:onedark_hide_endofbuffer = 1

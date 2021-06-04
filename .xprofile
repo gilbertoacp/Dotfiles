@@ -1,9 +1,28 @@
 xset s off
 xset -dpms
 xset s noblank
+
+# increase keyboard typing speed
 xset r rate 210 40
+
+# set keyboard layout to spanish
 setxkbmap es &
+
+# increase mouse wheel speed
 imwheel &
+
+# network manager systray
 nm-applet &
+
+# volumeicon systray
 volumeicon &
+
+# auth agent
+lxsession &
+
+# background image
 nitrogen --restore &
+
+# notification daemon
+/usr/bin/dunst &
+

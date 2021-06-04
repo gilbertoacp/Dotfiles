@@ -1,4 +1,5 @@
 alias ..='cd ..'
+alias ls="exa -la --group"
 alias l='ls -lha'
 alias sail='./vendor/bin/sail'
 alias dotfiles="/usr/bin/env git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"

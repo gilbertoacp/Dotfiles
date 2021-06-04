@@ -1,4 +1,4 @@
-ZSH_THEME="gentoo"
+ZSH_THEME="sorin"
 DISABLE_UPDATE_PROMPT=true
 
 plugins=(
