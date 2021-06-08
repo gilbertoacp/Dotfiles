@@ -11,6 +11,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
 Plug 'neoclide/coc.nvim'
+Plug 'tpope/vim-commentary'
 
 "appearance
 Plug 'sainnhe/edge'
