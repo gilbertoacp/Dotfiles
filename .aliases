@@ -1,5 +1,20 @@
+# some useful aliases
 alias ..='cd ..'
 alias ls="exa -la --group"
 alias l='ls -lha'
+
+# laravel sail
 alias sail='./vendor/bin/sail'
+
+# Colorize output (good for log files)
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias cat="bat"
+
+# easier to read disk
+alias df='df -h'                          
+alias free='free -m'                     
+
+# dotfiles
 alias dotfiles="/usr/bin/env git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
