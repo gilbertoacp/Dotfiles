@@ -57,34 +57,6 @@ tray-padding = 5
 
 cursor-click = pointer
 
-[module/bspwm]
-type = internal/bspwm
-
-label-focused = %name%
-label-focused-background = ${colors.background-wm}
-label-focused-underline= ${colors.primary}
-label-focused-padding = 1
-label-focused-foreground = ${colors.primary}
-
-label-occupied = %name%
-label-occupied-padding = 1
-label-occupied-foreground = ${colors.primary}
-
-label-urgent = %name%!
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 1
-
-label-empty = %name%
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 1
-
-format-underline = ${colors.background}
-format-background = ${colors.background}
-format-padding =
-
-; Separator in between workspaces
-label-separator = |
-
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
