@@ -1,16 +1,17 @@
 # some useful aliases
-alias ..='cd ..'
-alias ls="exa -la --group"
+[ ! -x "$(which exa)" ] || alias ls="exa -la --group"
+[ ! -x "$(which doas)" ] || alias sudo='doas'  
 alias l='ls -lha'
+alias ..='cd ..'
 
 # laravel sail
 alias sail='./vendor/bin/sail'
 
 # Colorize output (good for log files)
+[ ! -x "$(which bat)" ] || alias cat="bat"
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-alias cat="bat"
 
 # easier to read disk
 alias df='df -h'                          
