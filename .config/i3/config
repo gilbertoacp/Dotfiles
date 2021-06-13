@@ -230,7 +230,7 @@ bindsym $mod+Return \
 exec $TERMINAL
 
 bindsym $mod+b \
-exec brave
+exec firefox
 
 client.focused          $inactive-bg-color          $inactive-bg-color            $text-color          #00ff00
 client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00

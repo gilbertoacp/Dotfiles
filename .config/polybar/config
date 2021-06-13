@@ -44,7 +44,6 @@ module-margin-right = 1
 ; fonts
 font-0 = Hack:style=Bold:size=9;2
 font-1 = UbuntuMono Nerd Font:style=Bold:size=10;2
-font-N = <fontconfig pattern>;<vertical offset>
 ; modules
 modules-left = i3 xwindow
 modules-center =  
@@ -93,7 +92,7 @@ format-foreground = ${colors.primary}
 [module/weather]
 type = custom/script
 exec = bar_weather
-interval = 2200
+interval = 3600
 
 [module/updates]
 type = custom/script
