@@ -25,6 +25,3 @@ nitrogen --restore &
 
 # notification daemon
 /usr/bin/dunst &
-
-# compositor
-picom &
