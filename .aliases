@@ -1,6 +1,5 @@
 # some useful aliases
 [ ! -x "$(which exa)" ] || alias ls="exa -la --group"
-[ ! -x "$(which doas)" ] || alias sudo='doas'  
 alias l='ls -lha'
 alias ..='cd ..'
 
@@ -12,6 +11,8 @@ alias sail='./vendor/bin/sail'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
+
+[ $TERMINAL != 'kitty' ] || alias ssh="kitty +kitten ssh"
 
 # easier to read disk
 alias df='df -h'                          

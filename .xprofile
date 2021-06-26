@@ -11,17 +11,14 @@ setxkbmap es &
 # increase mouse wheel speed
 imwheel &
 
-# network manager systray
-nm-applet &
-
-# volumeicon systray
-volumeicon &
-
 # auth agent
 lxsession &
 
 # background image
 nitrogen --restore &
 
+# compositor
+picom  &
+
 # notification daemon
-/usr/bin/dunst &
+dunst &
