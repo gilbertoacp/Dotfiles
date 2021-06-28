@@ -48,11 +48,12 @@ fixed-center = true
 ; fonts
 font-0 = JetBrainsMono Nerd Font:style=Bold:size=9;2 
 font-1 = UbuntuMono Nerd Font:style=Bold:size=9;2
+;font-2 = unifont:pixelsize=9;2
 
 ; modules
 modules-left = pulseaudio memory
 modules-center = bspwm  
-modules-right = eth date
+modules-right = eth date 
 
 module-margin-left = 1
 module-margin-right = 1
@@ -145,6 +146,10 @@ format-volume = <label-volume> <bar-volume>
 label-volume = 墳
 label-volume-foreground = ${colors.foreground-alt}
 
+
+;label-volume = %{f#bf616a}󰕾 %percentage% %{f-}
+;label-volume-foreground = #bf616a
+
 label-muted = muted
 label-muted-foreground = #666
 
@@ -187,3 +192,5 @@ label = %{F#666}%{F-} %date% %{F#e60053}%{F-} %time%
 date = %A, %d/%m/%Y
 time = %H:%M
 interval = 5
+
+; vim:ft=dosini
