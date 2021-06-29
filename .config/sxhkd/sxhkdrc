@@ -1,0 +1,99 @@
+
+# Launch terminal emulator
+super + Return
+	$TERMINAL
+
+# Program launcher
+super + p
+	dmenu_run -nf '#F8F8F2' -nb '#282C34' -sb '#61AFEF' -sf '#F8F8F2' -fn 'monospace-10' -p '>'
+  
+# Reload sxhkd configuration file
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# File explorer
+super + e
+  pcmanfm
+
+### Bspwm Hotkeys ###
+
+# Restart bspwm
+super + shift + r
+	bspc wm -r
+
+# Quit bspwm
+ctrl + shift + Escape
+  bspc quit
+
+# Close and kill focused window
+# super + shift +  {c,q}
+# 	bspc node -{c,k}
+
+super + shift +  q
+ 	bspc node -c
+
+# Alternate between tiled and monacle layout
+super + m
+	bspc desktop -l next
+
+### Bspwm window states ###
+
+# set the window state
+super + f
+	bspc node -t {tiled,fullscreen}
+
+# Alternate between floating and tiled layout
+super + shift + space 
+	bspc node -t {floating, tiled}
+
+#
+# focus/swap
+#
+
+# Focus in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus the next/previous window in the current desktop
+super + {_,shift + }c
+	bspc node -f {next,prev}.local.!hidden.window
+
+# focus the older or newer node in the focus history
+super + {o,i}
+	bspc wm -h off; \
+	bspc node {older,newer} -f; \
+	bspc wm -h on
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# focus the last node/desktop
+super + {grave,Tab}
+	bspc {node,desktop} -f last
+
+# expand a window by moving one of its side outward
+super + alt + {h,j,k,l}
+	bspc node -z {left -40 0,bottom 0 40,top 0 -40,right 40 0} 
+
+# contract a window by moving one of its side inward
+super + alt + shift + {h,j,k,l}
+	bspc node -z {right -40 0,top 0 40,bottom 0 -40,left 40 0} 
+
+XF86AudioRaiseVolume
+	pactl set-sink-volume @DEFAULT_SINK@ +10%
+
+XF86AudioLowerVolume
+  pactl set-sink-volume @DEFAULT_SINK@ -10%
+
+XF86AudioMute
+  pactl set-sink-mute @DEFAULT_SINK@ toggle 
+
+XF86AudioMicMute
+  pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+XF86MonBrightnessUp
+  brightnessctl set +10%
+
+XF86MonBrightnessDown
+  brightnessctl set -10%
