@@ -12,12 +12,13 @@ Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
 Plug 'neoclide/coc.nvim'
 Plug 'tpope/vim-commentary'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'weirongxu/coc-explorer'
 
-"appearance
-Plug 'sainnhe/edge'
+" appearance
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'joshdick/onedark.vim'
-Plug 'christoomey/vim-tmux-navigator'
+Plug 'mhinz/vim-startify'
 
 call plug#end()
