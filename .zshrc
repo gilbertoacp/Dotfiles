@@ -3,6 +3,7 @@ DISABLE_UPDATE_PROMPT=true
 
 plugins=(
   git 
+  fzf
 )
 
 source $ZSH/oh-my-zsh.sh
