@@ -21,6 +21,8 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 
+export PATH=$PATH:/opt/gradle/gradle-7.1/bin
+
 # composer
 export PATH=$PATH:$HOME/.config/composer/vendor/bin
 
