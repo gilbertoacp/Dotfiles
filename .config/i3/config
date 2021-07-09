@@ -1,6 +1,6 @@
-exec_always launch-polybar
+exec_always launch-polybar-i3 
 
-font pango:UbuntuMono Nerd Font Bold 10
+font pango:JetBrainsMono Nerd Font Bold 9
 
 exec_always xrdb ~/.Xresources
 
@@ -132,7 +132,6 @@ mode "Resize" {
   bindsym $mod+r mode "default"
 }
 
-
 bindsym $mod+f \
 fullscreen toggle
 
@@ -224,13 +223,13 @@ bindsym $mod+p \
 exec dmenu_run -nf '#F8F8F2' -nb '#282C34' -sb '#61AFEF' -sf '#F8F8F2' -fn 'monospace-10' -p 'Run'
 
 bindsym $mod+e \
-exec thunar
+exec pcmanfm
 
 bindsym $mod+Return \
 exec $TERMINAL
 
 bindsym $mod+b \
-exec firefox
+exec brave
 
 client.focused          $inactive-bg-color          $inactive-bg-color            $text-color          #00ff00
 client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
@@ -258,4 +257,4 @@ for_window [class="Pavucontrol"] floating enable
 gaps inner 5
 gaps outer 5
 
-#hide_edge_borders none
+hide_edge_borders none

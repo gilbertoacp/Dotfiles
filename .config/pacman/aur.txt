@@ -1,0 +1,33 @@
+android-studio
+arc-darkest-theme-git
+brave-bin
+mailspring
+polybar
+postman-bin
+qt5-styleplugins
+simple-mtpfs
+ttf-ms-fonts
+yay
+zoom
+android-studio 4.2.2.0-1
+arc-darkest-theme-git r172.c8bdaead59-1
+brave-bin 1:1.26.74-1
+mailspring 1.9.1-1
+polybar 3.5.6-1
+postman-bin 8.7.0-1
+qt5-styleplugins 5.0.0.20170311-26
+simple-mtpfs 0.4.0-1
+ttf-ms-fonts 2.0-12
+yay 10.2.3-1
+zoom 5.7.1-1
+android-studio
+arc-darkest-theme-git
+brave-bin
+mailspring
+polybar
+postman-bin
+qt5-styleplugins
+simple-mtpfs
+ttf-ms-fonts
+yay
+zoom
