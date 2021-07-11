@@ -26,5 +26,4 @@ filetype on
 filetype indent on
 filetype plugin on
 
-let mapleader=" "
 let &t_ut=''

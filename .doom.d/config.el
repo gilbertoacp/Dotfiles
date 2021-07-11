@@ -35,6 +35,8 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 
+(doom-themes-neotree-config)
+(setq doom-themes-neotree-file-icons t)
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;

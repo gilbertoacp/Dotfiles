@@ -18,5 +18,12 @@ alias fgrep='fgrep --color=auto'
 alias df='df -h'                          
 alias free='free -m'                     
 
+alias doom='$HOME/.emacs.d/bin/doom'
+
 # dotfiles
 alias dotfiles="/usr/bin/env git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+
+# updates
+alias update='sudo pacman -Syyu'
+alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+
