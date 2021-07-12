@@ -27,3 +27,4 @@ alias dotfiles="/usr/bin/env git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias update='sudo pacman -Syyu'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
+alias clean-pacman='sudo pacman -R $(pacman -Qtdq)'
