@@ -27,4 +27,5 @@ export PATH=$PATH:/opt/gradle/gradle-7.1/bin
 export PATH=$PATH:$HOME/.config/composer/vendor/bin
 
 # local scripts
-export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.bin:$PATH
+

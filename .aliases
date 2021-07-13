@@ -18,7 +18,16 @@ alias fgrep='fgrep --color=auto'
 alias df='df -h'                          
 alias free='free -m'                     
 
-alias doom='$HOME/.emacs.d/bin/doom'
+# confirm before overwriting something
+alias cp="cp -i"
+alias mv='mv -i'
+alias rm='rm -i'
+
+# get top process eating memory
+alias psmem='ps auxf | sort -nr -k 4 | head -5'
+
+# get top process eating cpu ##
+alias pscpu='ps auxf | sort -nr -k 3 | head -5'
 
 # dotfiles
 alias dotfiles="/usr/bin/env git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
@@ -27,4 +36,5 @@ alias dotfiles="/usr/bin/env git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias update='sudo pacman -Syyu'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
+# remove unused dependencies
 alias clean-pacman='sudo pacman -R $(pacman -Qtdq)'
