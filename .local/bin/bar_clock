@@ -1,5 +1,0 @@
-#!/bin/sh 
-
-dte="$(date +"%a, %B %d %H:%M"| sed 's/  / /g')"
-icon=""
-printf "%s %s\\n" "$icon " "$dte"
