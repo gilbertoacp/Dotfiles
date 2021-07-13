@@ -6,10 +6,10 @@
 *.selbordercolor: #61afef
 *.selfgcolor: #61afef
 
-xterm*selectToClipboard: true
-xterm*disallowedWindowOps: 20,21,SetXProp
-*.font:	Monospace:pixelsize=15:antialias=true:autohint=true;
-*.fontalt0:JetBrainsMono Nerd Font Mono:pixelsize=15:antialias=true:autohint=true;
+/* xterm*selectToClipboard: true */
+/* xterm*disallowedWindowOps: 20,21,SetXProp */
+/* *.font:	Monospace:pixelsize=15:antialias=true:autohint=true; */
+/* *.fontalt0:JetBrainsMono Nerd Font Mono:pixelsize=15:antialias=true:autohint=true; */
 /* *.fontalt1:JoyPixels:pixelsize=24:antialias=true:autohint=true; */
 /* *.alpha: 0.95 */
 
