@@ -1,6 +1,6 @@
 # some useful aliases
-[ ! -x "$(which exa)" ] || alias ls="exa -la --group"
-alias l='ls -lha'
+[ ! -x "$(which exa)" ] || alias ls="exa"
+alias l='ls -lha --group'
 alias ..='cd ..'
 
 # laravel sail

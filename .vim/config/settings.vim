@@ -25,5 +25,4 @@ syntax enable
 filetype on
 filetype indent on
 filetype plugin on
-
 let &t_ut=''
