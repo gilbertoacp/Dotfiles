@@ -23,6 +23,5 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'joshdick/onedark.vim'
 Plug 'mhinz/vim-startify'
-Plug 'chriskempson/base16-vim'
 
 call plug#end()
