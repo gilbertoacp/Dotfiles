@@ -17,11 +17,18 @@ Plug 'tpope/vim-commentary'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'weirongxu/coc-explorer'
 Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-fugitive'
 
 " appearance
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'joshdick/onedark.vim'
 Plug 'mhinz/vim-startify'
+Plug 'ryanoasis/vim-devicons'
+
+if has('nvim')
+  Plug 'kyazdani42/nvim-web-devicons'
+  Plug 'romgrk/barbar.nvim'
+endif
 
 call plug#end()
