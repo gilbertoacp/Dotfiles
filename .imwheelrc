@@ -1,3 +1,7 @@
 "^Brave-browser$"
   None, Up, Button4, 3
   None, Down, Button5, 3
+
+"^discord$"
+  None, Up, Button4, 3
+  None, Down, Button5, 3
