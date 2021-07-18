@@ -2,5 +2,5 @@
 
 killall -q polybar
 echo "---" | tee -a /tmp/bar.log
-polybar bar 2>&1 | tee -a /tmp/polybar1.log & disown
+polybar $1 2>&1 | tee -a /tmp/polybar1.log & disown
 echo "Bars launched..."
