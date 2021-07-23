@@ -2,7 +2,7 @@
 export EDITOR='vim'
 
 # terminal
-export TERMINAL='kitty'
+export TERMINAL='alacritty'
 
 # qt
 export QT_STYLE_OVERRIDE=kvantum
