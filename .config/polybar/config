@@ -120,16 +120,17 @@ cursor-click = pointer
 
 [module/bspwm]
 type = internal/bspwm
-ws-icon-default =  
+ws-icon-default = ""
 format = <label-state> <label-mode>
 
 label-active = %icon%  
 label-active-padding = 2
-label-active-font = 3
 label-active-foreground = #2fbbf2
+label-active-background = ${colors.background-wm}
 
 label-occupied = %icon% 
 label-occupied-padding = 2
+label-occupied-foreground = ${colors.primary}
 
 label-urgent = %icon%
 label-urgent-padding = 2
