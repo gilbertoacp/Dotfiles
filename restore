@@ -1,8 +1,5 @@
 #!/bin/sh
 
-git clone https://github.com/robbyrussell/oh-my-zsh \
-    "$HOME/.oh-my-zsh"
-
 git clone --bare --recursive https://github.com/gilbertoacp/dotfiles \
     "$HOME/.dotfiles"
 
