@@ -313,7 +313,6 @@ libnumbertext
 libodfgen
 libogg
 libomxil-bellagio
-libopenaptx
 liborcus
 libosinfo
 libotf
