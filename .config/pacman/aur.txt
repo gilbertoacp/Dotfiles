@@ -6,6 +6,9 @@ polybar
 postman-bin
 qt5-styleplugins
 simple-mtpfs
+stacer
 ttf-ms-fonts
+ttf-symbola
+visual-studio-code-bin
 yay
 zoom

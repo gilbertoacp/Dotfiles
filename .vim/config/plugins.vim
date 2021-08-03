@@ -5,7 +5,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'stanangeloff/php.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'alvan/vim-closetag'
-Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " utils
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }

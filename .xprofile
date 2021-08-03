@@ -17,8 +17,5 @@ lxsession &
 # background image
 nitrogen --restore &
 
-# compositor
-picom  &
-
 # notification daemon
 dunst &
