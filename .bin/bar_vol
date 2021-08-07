@@ -1,0 +1,4 @@
+#!/bin/bash
+vol="$(pamixer --get-volume)"
+icon="墳"
+printf "%s %s\\n" "$icon" "$vol%"   

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+load="$(cut -d " " -f 1,2,3 /proc/loadavg)"
+icon=" "
+printf "%s %s\\n" "$icon" "$load"
