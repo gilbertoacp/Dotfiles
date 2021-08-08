@@ -170,7 +170,7 @@ format-foreground = ${foreground-alt}
 label = 
 label-font = 3
 
-bar-used-width = 5
+bar-used-width = 8
 bar-used-indicator = |
 bar-used-indicator-font = 4
 bar-used-indicator-foreground = ${colors.primary}
