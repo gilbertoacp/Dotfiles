@@ -170,7 +170,7 @@ format-foreground = ${foreground-alt}
 label = 
 label-font = 3
 
-bar-used-width = 8
+bar-used-width = 7
 bar-used-indicator = |
 bar-used-indicator-font = 4
 bar-used-indicator-foreground = ${colors.primary}
@@ -242,7 +242,7 @@ format = <bar-load>
 format-prefix = "﬙ "
 format-prefix-foreground = ${colors.foreground-alt}
 format-foreground = ${colors.foreground}
-format-padding = 1
+format-padding = 0
 bar-load-indicator =
 bar-load-width = 8
 bar-load-foreground-0 = ${colors.primary}
