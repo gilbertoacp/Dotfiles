@@ -10,5 +10,6 @@ stacer
 ttf-ms-fonts
 ttf-symbola
 visual-studio-code-bin
+xtitle
 yay
 zoom
