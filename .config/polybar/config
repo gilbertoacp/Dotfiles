@@ -55,13 +55,13 @@ modules-center =
 modules-right = pulseaudio cpu memory date 
 
 module-margin-left = 0
-module-margin-right = 1
+module-margin-right = 0
 
 underline-size = 1
 
 ; systray
 tray-position = right
-tray-padding = 5 
+tray-padding = 0 
 
 cursor-click = pointer
 
@@ -113,8 +113,8 @@ module-margin-right = 1
 underline-size = 1
 
 ; systray
-tray-position = none
-tray-padding = 5 
+tray-position = right
+tray-padding = 0 
 
 cursor-click = pointer
 
