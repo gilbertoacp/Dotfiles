@@ -7,8 +7,6 @@ alias ..='cd ..'
 # laravel sail
 alias sail='./vendor/bin/sail'
 
-[ -x "$(which nvim)" ] && alias vim="nvim"
-
 # Colorize output (good for log files)
 [ ! -x "$(which bat)" ] || alias cat="bat"
 alias grep='grep --color=auto'
