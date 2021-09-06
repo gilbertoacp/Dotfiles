@@ -7,9 +7,6 @@ export TERMINAL='kitty'
 # qt
 export QT_STYLE_OVERRIDE=kvantum
 
-# zsh
-export ZSH="/home/gilberto/.oh-my-zsh"
-
 # java
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
 export PATH=$JAVA_HOME/bin:$PATH

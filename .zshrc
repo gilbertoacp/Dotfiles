@@ -1,14 +1,25 @@
-export DISABLE_UPDATE_PROMPT=true
+[[ $- != *i* ]] && return
+
 ZSH_THEME="sorin"
-plugins=(
-  git 
-  fzf
-)
 
-source $ZSH/oh-my-zsh.sh
-[[ ! -f ~/.aliases ]] || source ~/.aliases
+plugins=( git fzf )
 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-export PATH=/home/gilberto/.fnm:$PATH
-eval "`fnm env`"
+DISABLE_UPDATE_PROMPT=true
+
+if [ -d "$HOME/.oh-my-zsh" ]; then
+  export ZSH="$HOME/.oh-my-zsh"
+  source $ZSH/oh-my-zsh.sh
+fi
+
+[ -f ~/.aliases ] && source ~/.aliases
+
+[ -f "/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" ] && \
+  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+
+[ -f "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ] && \
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+
+if [ -d "$HOME/.fnm" ]; then
+  export PATH=/home/gilberto/.fnm:$PATH
+  eval "`fnm env`"
+fi
