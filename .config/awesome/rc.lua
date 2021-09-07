@@ -56,7 +56,7 @@ awful.layout.layouts = {
     -- awful.layout.suit.fair.horizontal,
     -- awful.layout.suit.spiral,
     -- awful.layout.suit.spiral.dwindle,
-    -- awful.layout.suit.max,
+    awful.layout.suit.max,
     -- awful.layout.suit.max.fullscreen,
     -- awful.layout.suit.magnifier,
     -- awful.layout.suit.corner.nw,
@@ -234,7 +234,7 @@ awful.screen.connect_for_each_screen(
         set_wallpaper(s)
 
         -- Each screen has its own tag table.
-        awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+        awful.tag({ " 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 " }, s, awful.layout.layouts[1])
 
         -- Create a promptbox for each screen
         s.mypromptbox = awful.widget.prompt()
@@ -260,7 +260,6 @@ awful.screen.connect_for_each_screen(
         s.mytasklist = awful.widget.tasklist {
             screen  = s,
             filter  = awful.widget.tasklist.filter.currenttags,
-            buttons = tasklist_buttons
         }
 
         -- Create the wibox
@@ -275,17 +274,16 @@ awful.screen.connect_for_each_screen(
         s.mywibox:setup {
             layout = wibox.layout.align.horizontal,
             { -- Left widgets
+                s.mylayoutbox,
                 layout = wibox.layout.fixed.horizontal,
-                mylauncher,
                 s.mytaglist,
-                s.mypromptbox,
             },
             s.mytasklist, -- Middle widget
             { -- Right widgets
                 layout = wibox.layout.fixed.horizontal,
-                wibox.widget.systray(),
                 mytextclock,
-                s.mylayoutbox,
+                wibox.widget.systray(),
+                
             },
         }
     end
@@ -649,9 +647,9 @@ globalkeys = gears.table.join(
 
     awful.key(
         { modkey },            
-        "r"       ,     
+        "e"       ,     
         function () 
-            awful.screen.focused().mypromptbox:run() 
+            awful.spawn("nautilus") 
         end,
         {   
             description = "run prompt", 
@@ -678,9 +676,9 @@ globalkeys = gears.table.join(
 
     awful.key(
         { modkey }, 
-        "d"       , 
+        "p"       , 
         function() 
-            menubar.show() 
+            awful.spawn('dmenu_run')
         end,
         {
             description = "show the menubar", 
@@ -716,7 +714,7 @@ clientkeys = gears.table.join(
     ),
 
     awful.key(
-        { modkey, "Control" }, 
+        { modkey, "Shift" }, 
         "Return"             , 
         function (c) 
             c:swap(awful.client.getmaster()) 
@@ -937,7 +935,12 @@ awful.rules.rules = {
                 "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
                 "Wpa_gui",
                 "veromix",
-                "xtightvncviewer"
+                "xtightvncviewer",
+                "SimpleScreenRecorder",
+                "flameshot",
+                "Nitrogen",
+                "Pavucontrol",
+                "Qalculate-gtk",
             },
             -- Note that the name property shown in xprop might be set slightly after creation of the client
             -- and the name shown there might not match defined rules here.
