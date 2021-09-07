@@ -234,8 +234,7 @@ awful.screen.connect_for_each_screen(
         set_wallpaper(s)
 
         -- Each screen has its own tag table.
-        awful.tag({ " 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 " }, s, awful.layout.layouts[1])
-
+        awful.tag({ " DEV ", " WWW ", " SYS ", " DOC ", " VBOX ", " CHAT ", " MUS ", " VID ", " GFX " }, s, awful.layout.layouts[1])
         -- Create a promptbox for each screen
         s.mypromptbox = awful.widget.prompt()
         -- Create an imagebox widget which will contain an icon indicating which layout we're using.
@@ -274,9 +273,9 @@ awful.screen.connect_for_each_screen(
         s.mywibox:setup {
             layout = wibox.layout.align.horizontal,
             { -- Left widgets
-                s.mylayoutbox,
                 layout = wibox.layout.fixed.horizontal,
                 s.mytaglist,
+                s.mylayoutbox,
             },
             s.mytasklist, -- Middle widget
             { -- Right widgets
@@ -649,7 +648,7 @@ globalkeys = gears.table.join(
         { modkey },            
         "e"       ,     
         function () 
-            awful.spawn("nautilus") 
+            awful.spawn("pcmanfm") 
         end,
         {   
             description = "run prompt", 
@@ -1012,30 +1011,30 @@ client.connect_signal("request::titlebars",
 
         )
 
-    -- awful.titlebar(c) : setup {
-    --     { -- Left
-    --         awful.titlebar.widget.iconwidget(c),
-    --         buttons = buttons,
-    --         layout  = wibox.layout.fixed.horizontal
-    --     },
-    --     { -- Middle
-    --         { -- Title
-    --             align  = "center",
-    --             widget = awful.titlebar.widget.titlewidget(c)
-    --         },
-    --         buttons = buttons,
-    --         layout  = wibox.layout.flex.horizontal
-    --     },
-    --     { -- Right
-    --         awful.titlebar.widget.floatingbutton (c),
-    --         awful.titlebar.widget.maximizedbutton(c),
-    --         awful.titlebar.widget.stickybutton   (c),
-    --         awful.titlebar.widget.ontopbutton    (c),
-    --         awful.titlebar.widget.closebutton    (c),
-    --         layout = wibox.layout.fixed.horizontal()
-    --     },
-    --     layout = wibox.layout.align.horizontal
-    -- }
+    awful.titlebar(c) : setup {
+        { -- Left
+            awful.titlebar.widget.iconwidget(c),
+            buttons = buttons,
+            layout  = wibox.layout.fixed.horizontal
+        },
+        { -- Middle
+            { -- Title
+                align  = "center",
+                widget = awful.titlebar.widget.titlewidget(c)
+            },
+            buttons = buttons,
+            layout  = wibox.layout.flex.horizontal
+        },
+        { -- Right
+            awful.titlebar.widget.floatingbutton (c),
+            awful.titlebar.widget.maximizedbutton(c),
+            awful.titlebar.widget.stickybutton   (c),
+            awful.titlebar.widget.ontopbutton    (c),
+            awful.titlebar.widget.closebutton    (c),
+            layout = wibox.layout.fixed.horizontal()
+        },
+        layout = wibox.layout.align.horizontal
+    }
     end
 )
 

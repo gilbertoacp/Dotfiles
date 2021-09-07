@@ -8,7 +8,7 @@ local themes_path = gfs.get_themes_dir()
 colors = xresources.get_current_theme()
 
 local font_name                                 = "Roboto"
-local font_size                                 = "10"
+local font_size                                 = "9"
 
 local theme = {
     bg_normal     =  colors.background,
@@ -32,7 +32,7 @@ theme.taglist_fg_occupied      = '#fff'
 theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
 
-theme.useless_gap   = 5
+theme.useless_gap   = 10
 theme.border_width  = dpi(1)
 theme.border_normal = "#000000"
 theme.border_focus  = "#535d6c"
@@ -47,11 +47,11 @@ theme.tasklist_font_normal                      = theme.font
 theme.tasklist_font_focus                       = theme.font_bold
 theme.tasklist_font_urgent                      = theme.font_bold
 theme.tasklist_fg_normal                        = colors.colors7
-theme.tasklist_fg_focus                         = theme.fg_focus
+theme.tasklist_fg_focus                         = '#fff'
 theme.tasklist_fg_minimize                      = colors.colors1
 theme.tasklist_fg_urgent                        = colors.colors1
 theme.tasklist_bg_normal                        = colors.background
-theme.tasklist_bg_focus                         = theme.bg_normal
+theme.tasklist_bg_focus                         = theme.bg_focus
 theme.tasklist_bg_urgent                        = theme.bg_urgent
 theme.tasklist_spacing                          = 5
 -- theme.tasklist_border_focus                         = "#666"
@@ -59,8 +59,8 @@ theme.tasklist_spacing                          = 5
 theme.systray_icon_spacing                      = 2
 
 theme.menu_submenu_icon = themes_path.."default/submenu.png"
--- theme.menu_height = dpi(12)
-theme.menu_height = 8
+-- theme.menu_height = dpi(0)
+theme.menu_height = 0
 theme.menu_width  = dpi(100)
 
 theme.layout_fairh = themes_path.."default/layouts/fairhw.png"
