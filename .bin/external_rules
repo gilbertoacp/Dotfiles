@@ -1,10 +1,10 @@
 #! /bin/sh
 
 wid=$1
-title=$(xtitle "$wid")
+name=$(xprop -id "$wid" | grep "_NET_WM_NAME(UTF8_STRING)" | awk -F= '{print $2}' | xargs)
 role=$(xprop -id "$wid" | grep "WM_WINDOW_ROLE(STRING)" | awk -F= '{print $2}' | xargs)
 
-[[ "$title" =~ .*"Emulator".* ]] \
+[[ "$name" =~ .*"Emulator".* ]] \
     && echo state=floating
 
 [[ "$role" =~ "pop-up" ]] \
