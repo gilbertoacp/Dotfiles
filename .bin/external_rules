@@ -2,6 +2,10 @@
 
 wid=$1
 title=$(xtitle "$wid")
+role=$(xprop -id "$wid" | grep "WM_WINDOW_ROLE(STRING)" | awk -F= '{print $2}' | xargs)
 
 [[ "$title" =~ .*"Emulator".* ]] \
+    && echo state=floating
+
+[[ "$role" =~ "pop-up" ]] \
     && echo state=floating
