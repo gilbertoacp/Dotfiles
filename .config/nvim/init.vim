@@ -1,3 +1,11 @@
-set runtimepath^=~/.vim runtimepath+=~/.vim/after
-let &packpath = &runtimepath
-source ~/.vim/vimrc
+source $XDG_CONFIG_HOME/nvim/config/settings.vim
+source $XDG_CONFIG_HOME/nvim/config/plugins.vim
+source $XDG_CONFIG_HOME/nvim/config/appearance.vim
+source $XDG_CONFIG_HOME/nvim/config/keys.vim
+source $XDG_CONFIG_HOME/nvim/config/plugins/fzf.vim
+source $XDG_CONFIG_HOME/nvim/config/plugins/nerdtree.vim
+source $XDG_CONFIG_HOME/nvim/config/plugins/vim-commentary.vim
+source $XDG_CONFIG_HOME/nvim/config/plugins/coc-explorer.vim
+source $XDG_CONFIG_HOME/nvim/config/plugins/coc.vim
+source $XDG_CONFIG_HOME/nvim/config/plugins/vim-closetag.vim
+source $XDG_CONFIG_HOME/nvim/config/plugins/floaterm.vim
