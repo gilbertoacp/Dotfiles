@@ -1,7 +1,7 @@
 # some useful aliases
 [ ! -x "$(which exa)" ] || alias ls="exa"
 # alias ls='ls --color'
-alias l='ls -lha --group'
+alias l='ls -la --group'
 alias ..='cd ..'
 
 # laravel sail
