@@ -7,5 +7,8 @@ role=$(xprop -id "$wid" | grep "WM_WINDOW_ROLE(STRING)" | awk -F= '{print $2}' |
 [[ "$name" =~ .*"Emulator".* ]] \
     && echo state=floating
 
+[[ "$name" =~ .*"win0".* ]] \
+    && echo state=floating
+
 [[ "$role" =~ "pop-up" ]] \
     && echo state=floating
