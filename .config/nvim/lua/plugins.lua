@@ -10,10 +10,8 @@ end
 return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-
-  -- NVIM TREE
+  -- Nvim Tree
   use 'kyazdani42/nvim-tree.lua'
-
   -- Native LSP
   use 'neovim/nvim-lspconfig'
 --  use'hrsh7th/nvim-compe'

@@ -6,7 +6,7 @@ xset s noblank
 xset r rate 210 40
 
 # compositor
-picom --experimental-backends &
+picom -GC &
 
 # set keyboard layout to spanish
 setxkbmap es &

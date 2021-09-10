@@ -1,3 +1,7 @@
+-- function map(mode, keymap, action)
+--     vim.api.nvim_set_keymap(mode, keymap, action { noremap = true, silent = true })
+-- end
+
 vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', {
     noremap = true,
     silent  = true
