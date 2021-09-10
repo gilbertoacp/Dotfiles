@@ -5,7 +5,7 @@ super + Return
 
 # Program launcher
 super + p
-	dmenu_run
+	dmenu_run -nf '#979eab' -nb '#1e222a' -sb '#2b2f37' -sf '#61afef' -fn 'monospace-10' -p 'Run'
   
 # Reload sxhkd configuration file
 super + Escape
