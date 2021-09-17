@@ -15,4 +15,17 @@ return require('packer').startup(function()
   -- Native LSP
   use 'neovim/nvim-lspconfig'
 --  use'hrsh7th/nvim-compe'
+    
+  use 'romgrk/barbar.nvim'
+  use {
+    'glepnir/galaxyline.nvim',
+    branch = 'main'
+  }
+  use 'kyazdani42/nvim-web-devicons'
+  use 'navarasu/onedark.nvim'
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+  use 'christianchiarulli/nvcode-color-schemes.vim'
 end)

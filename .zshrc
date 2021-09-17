@@ -23,3 +23,6 @@ if [ -d "$HOME/.fnm" ]; then
   export PATH=/home/gilberto/.fnm:$PATH
   eval "`fnm env`"
 fi
+
+[ -e ~/.dircolors ] && eval $(dircolors -b ~/.dircolors) ||
+    eval $(dircolors -b)

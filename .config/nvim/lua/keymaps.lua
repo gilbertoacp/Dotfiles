@@ -1,91 +1,47 @@
--- function map(mode, keymap, action)
---     vim.api.nvim_set_keymap(mode, keymap, action { noremap = true, silent = true })
--- end
-
-vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', {
-    noremap = true,
-    silent  = true
-})
 vim.g.mapleader = ' '
 
-vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', { 
-    noremap = true,
-    silent  = true
-})
+function map(mode, keymap, action)
+    vim.api.nvim_set_keymap(mode, keymap, action, { noremap = true, silent = true })
+end
 
-vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', { 
-    noremap = true,
-    silent  = true
-})
-vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', { 
-    silent  = true
-})
-vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', { 
-    silent  = true
-})
-vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', { 
-    silent  = true
-})
-vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { 
-    silent  = true
-})
+map('n', '<Space>', '<NOP>')
 
-vim.api.nvim_set_keymap('v', '<', '<gv', { 
-    noremap = true,
-    silent  = true
-})
-vim.api.nvim_set_keymap('v', '>', '>gv', { 
-    noremap = true,
-    silent  = true
-})
+map('n', '<Leader>h', ':set hlsearch!<CR>')
 
-vim.api.nvim_set_keymap('n', '<TAB>', ':bnext<CR>', { 
-    noremap = true,
-    silent  = true
-})
+map('n', '<Leader>e', ':NvimTreeToggle<CR>')
 
-vim.api.nvim_set_keymap('n', '<S-TAB>', ':bprevious<CR>', { 
-    noremap = true,
-    silent  = true
-})
+map('n', '<C-h>', '<C-w>h')
 
+map('n', '<C-j>', '<C-w>j')
 
-vim.api.nvim_set_keymap('v', 'K', ':move \'<-2<CR>gv-gv\'', { 
-    noremap = true,
-    silent  = true
-})
-vim.api.nvim_set_keymap('v', 'J', ':move \'>+2<CR>gv-gv\'', { 
-    noremap = true,
-    silent  = true
-})
+map('n', '<C-k>', '<C-w>k')
+
+map('n', '<C-l>', '<C-w>l')
+
+map('v', '<', '<gv')
+map('v', '>', '>gv')
+
+map('n', '<TAB>', ':bnext<CR>')
+
+map('n', '<S-TAB>', ':bprevious<CR>')
+
+map('v', 'K', ':move \'<-2<CR>gv-gv\'')
+map('v', 'J', ':move \'>+2<CR>gv-gv\'')
+
+map('v', 'J', ':move \'>+2<CR>gv-gv\'')
+
+map('i', '<expr><TAB>', [[pumvisible() ? "\<C-n>" : "\<TAB>"]])
+
+map('n', '<C-Up>', ':resize -2<CR>')
+
+map('n', '<C-Down>', ':resize +2<CR>')
+
+map('n', '<C-Left>', ':vertical resize -2<CR>')
+
+map('n', '<C-Right>', ':vertical resize +2<CR>')
 
 
-vim.api.nvim_set_keymap('v', 'J', ':move \'>+2<CR>gv-gv\'', { 
-    noremap = true,
-    silent  = true
-})
-
-vim.api.nvim_set_keymap('i', '<expr><TAB>', [[pumvisible() ? "\<C-n>" : "\<TAB>"]], { 
-    noremap = true,
-    silent  = true
-})
-
-
-vim.api.nvim_set_keymap('n', '<C-Up>', ':resize -2<CR>', { 
-    noremap = true,
-    silent  = true
-})
-
-
-vim.api.nvim_set_keymap('n', '<C-Down>', ':resize +2<CR>', { 
-    noremap = true,
-    silent  = true
-})
-vim.api.nvim_set_keymap('n', '<C-Left>', ':vertical resize -2<CR>', { 
-    noremap = true,
-    silent  = true
-})
-vim.api.nvim_set_keymap('n', '<C-Right>', ':vertical resize +2<CR>', { 
-    noremap = true,
-    silent  = true
-})
+map('n', '<Leader>ff', '<cmd>Telescope find_files<CR>')
+map('n', '<Leader>fg', '<cmd>Telescope live_grep<CR>')
+map('n', '<Leader>fb', '<cmd>Telescope buffers<CR>')
+map('n', '<Leader>fh', '<cmd>Telescope help_tags<CR>')

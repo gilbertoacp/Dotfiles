@@ -15,7 +15,7 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-[ $TERMINAL != 'kitty' ] || alias ssh="kitty +kitten ssh"
+[[ $TERMINAL != 'kitty' ]] || alias ssh="kitty +kitten ssh"
 
 # easier to read disk
 alias df='df -h'                          
