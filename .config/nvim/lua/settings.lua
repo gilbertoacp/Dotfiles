@@ -1,5 +1,4 @@
-vim.o.relativenumber  = true
---vim.o.formatoptions="-=cro"
+vim.wo.number = true
 vim.o.colorcolumn = "81"
 vim.o.laststatus = 0
 vim.o.smartindent = true

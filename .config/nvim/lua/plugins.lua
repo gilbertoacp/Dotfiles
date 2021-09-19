@@ -14,7 +14,6 @@ return require('packer').startup(function()
   use 'kyazdani42/nvim-tree.lua'
   -- Native LSP
   use 'neovim/nvim-lspconfig'
---  use'hrsh7th/nvim-compe'
     
   use 'romgrk/barbar.nvim'
   use {
@@ -22,10 +21,13 @@ return require('packer').startup(function()
     branch = 'main'
   }
   use 'kyazdani42/nvim-web-devicons'
-  use 'navarasu/onedark.nvim'
   use {
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use 'christianchiarulli/nvcode-color-schemes.vim'
+
+  use 'nvim-treesitter/nvim-treesitter'
+  use 'joshdick/onedark.vim'
+
+
 end)

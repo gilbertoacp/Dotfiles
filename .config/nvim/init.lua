@@ -1,6 +1,12 @@
 require('plugins')
 require('keymaps')
 require('settings')
+require('appearance')
 
-vim.g.onedark_darker_diagnostics = false -- By default it is true
-require('onedark').setup()
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  highlight = {
+    enable = true,              -- false will disable the whole extension
+    disable = { "c", "rust" },  -- list of language that will be disabled
+  },
+}
