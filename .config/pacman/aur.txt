@@ -1,12 +1,10 @@
 android-studio
 arc-darkest-theme-git
 brave-bin
-insomnia-bin
 mailspring
-mongodb-bin
 polybar
 postman-bin
-qt5-styleplugins
+robo3t-bin
 simple-mtpfs
 slack-desktop
 stacer

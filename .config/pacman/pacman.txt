@@ -98,7 +98,6 @@ file
 filesystem
 filezilla
 findutils
-firefox
 flac
 flameshot
 flex
@@ -276,6 +275,7 @@ libcolord
 libconfig
 libcroco
 libcups
+libcurl-gnutls
 libdaemon
 libdatrie
 libdbusmenu-glib
@@ -477,10 +477,10 @@ licenses
 lightdm
 lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
+linux
 linux-api-headers
 linux-firmware
-linux-lts
-linux-lts-headers
+linux-headers
 llvm
 llvm-libs
 lm_sensors
@@ -502,7 +502,6 @@ m4
 mailcap
 make
 man-db
-mariadb
 mariadb-clients
 mariadb-libs
 materia-gtk-theme
@@ -542,7 +541,6 @@ nspr
 nss
 ntfs-3g
 numactl
-obs-studio
 ocl-icd
 oniguruma
 openal
@@ -551,6 +549,7 @@ openjpeg2
 openmpi
 openssh
 openssl
+openssl-1.0
 opus
 orc
 os-prober
@@ -560,6 +559,7 @@ p7zip
 pacman
 pacman-contrib
 pacman-mirrorlist
+pahole
 pam
 pambase
 pamixer
@@ -733,12 +733,14 @@ util-linux
 util-linux-libs
 v4l-utils
 vde2
+vi
 vid.stab
+vim
+vim-runtime
 virglrenderer
 virt-install
 virtualbox
 virtualbox-host-dkms
-vlc
 vmaf
 volume_key
 volumeicon
