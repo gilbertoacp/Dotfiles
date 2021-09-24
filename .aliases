@@ -1,5 +1,5 @@
 # some useful aliases
-[ ! -x "$(which exa)" ] || alias ls="exa"
+[ -x "/usr/bin/exa" ] && alias ls="exa"
 # alias ls='ls --color'
 alias l='ls -la --group'
 alias ..='cd ..'
@@ -7,10 +7,10 @@ alias ..='cd ..'
 # laravel sail
 alias sail='./vendor/bin/sail'
 
-[ ! -x "$(which vim)" ] && alias vim="nvim"
+[ ! -x "/usr/bin/vim" ] && alias vim="nvim"
 
 # Colorize output (good for log files)
-[ ! -x "$(which bat)" ] || alias cat="bat"
+[ -x "/usr/bin/bat" ] || alias cat="bat"
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
