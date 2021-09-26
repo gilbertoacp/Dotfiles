@@ -8,10 +8,6 @@
   None, Up, Button4, 3
   None, Down, Button5, 3
 
-"^discord$"
-  None, Up, Button4, 3
-  None, Down, Button5, 3
-
 "^polybar$"
 	None, Up, Button4
 	None, Down, Button5
