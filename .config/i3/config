@@ -223,7 +223,7 @@ bindsym $mod+p \
 exec dmenu_run -nf '#979eab' -nb '#1e222a' -sb '#2b2f37' -sf '#61afef' -fn 'monospace-10' -p 'Run'
 
 bindsym $mod+e \
-exec pcmanfm
+exec thunar 
 
 bindsym $mod+Return \
 exec $TERMINAL
@@ -254,7 +254,9 @@ for_window [class="download"] floating enable
 for_window [class="notification"] floating enable
 for_window [class="Pavucontrol"] floating enable
 
-gaps inner 5
-gaps outer 5
+gaps inner 3
+gaps outer 3
 
 hide_edge_borders none
+
+smart_gaps on

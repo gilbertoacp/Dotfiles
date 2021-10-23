@@ -20,7 +20,7 @@ fi
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
 if [ -d "$HOME/.fnm" ]; then
-  export PATH=/home/gilberto/.fnm:$PATH
+  export PATH=$HOME/.fnm:$PATH
   eval "`fnm env`"
 fi
 

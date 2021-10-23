@@ -12,10 +12,10 @@ picom -GC &
 setxkbmap es &
 
 # increase mouse wheel speed
-imwheel &
+#imwheel &
 
 # auth agent
-lxsession &
+#lxsession &
 
 # background image
 nitrogen --restore &
