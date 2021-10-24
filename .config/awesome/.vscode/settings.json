@@ -1,0 +1,10 @@
+{
+    "Lua.diagnostics.globals": [
+        "awesome",
+        "client",
+        "root"
+    ],
+    "Lua.diagnostics.disable": [
+        "lowercase-global"
+    ]
+}
