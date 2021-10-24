@@ -73,6 +73,16 @@ local client_signal = {
             layout = wibox.layout.align.horizontal
         }
     end,
+
+    ["property::fullscreen"] = function(c)
+        if c.fullscreen then
+            gears.timer.delayed_call(function()
+                if c.valid then
+                    c:geometry(c.screen.geometry)
+                end
+            end)
+        end
+    end,
 }
 
 return client_signal

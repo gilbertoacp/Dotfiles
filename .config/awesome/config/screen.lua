@@ -38,7 +38,7 @@ local screen = function(s)
     s.mywibox = awful.wibar(
         {
             position = "top",
-            screen   = s
+            screen   = s,
         }
     )
 
