@@ -7,27 +7,25 @@ if fn.empty(fn.glob(install_path)) > 0 then
   vim.cmd 'packadd packer.nvim'
 end
 
-return require('packer').startup(function()
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
-  -- Nvim Tree
-  use 'kyazdani42/nvim-tree.lua'
-  -- Native LSP
-  use 'neovim/nvim-lspconfig'
-    
-  use 'romgrk/barbar.nvim'
-  use {
-    'glepnir/galaxyline.nvim',
-    branch = 'main'
-  }
-  use 'kyazdani42/nvim-web-devicons'
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
-
-  use 'nvim-treesitter/nvim-treesitter'
-  use 'joshdick/onedark.vim'
-
-
-end)
+return require('packer').startup(
+  function()
+    use 'wbthomason/packer.nvim'
+    use 'romgrk/barbar.nvim'
+    use {
+      'glepnir/galaxyline.nvim',
+      branch = 'main',
+      requires = {'kyazdani42/nvim-web-devicons', opt = true}
+    }
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
+    use 'nvim-treesitter/nvim-treesitter'
+    use 'joshdick/onedark.vim'
+    use {
+      'kyazdani42/nvim-tree.lua',
+      requires = 'kyazdani42/nvim-web-devicons',
+      config = function() require'nvim-tree'.setup {} end
+    }
+  end
+)

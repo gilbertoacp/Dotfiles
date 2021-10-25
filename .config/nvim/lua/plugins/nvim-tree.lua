@@ -1,0 +1,1 @@
+_G.map('n', '<Leader>e', ':NvimTreeToggle<CR>')
