@@ -20,12 +20,12 @@ return require('packer').startup(
         'nvim-telescope/telescope.nvim',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+    use {
+        'kyazdani42/nvim-tree.lua',
+        requires = 'kyazdani42/nvim-web-devicons',
+        config = function() require'nvim-tree'.setup {} end
+    }
     use 'nvim-treesitter/nvim-treesitter'
     use 'joshdick/onedark.vim'
-    use {
-      'kyazdani42/nvim-tree.lua',
-      requires = 'kyazdani42/nvim-web-devicons',
-      config = function() require'nvim-tree'.setup {} end
-    }
   end
 )
