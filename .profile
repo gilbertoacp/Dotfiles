@@ -4,6 +4,9 @@ export EDITOR='vim'
 # terminal
 export TERMINAL='kitty'
 
+# terminal
+export BROWSER='brave'
+
 # qt
 export QT_STYLE_OVERRIDE=kvantum
 
