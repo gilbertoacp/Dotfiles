@@ -4,7 +4,7 @@ export EDITOR='vim'
 # terminal
 export TERMINAL='kitty'
 
-# terminal
+# browser
 export BROWSER='brave'
 
 # qt
