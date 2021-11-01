@@ -63,14 +63,14 @@ local rules = {
     },
 
     {
-        rule_any   = {
-            type = {
-                "normal",
-                "dialog"
+        rule_any = {
+            class = {
+                "mpv",
+                "vlc"
             }
         },
         properties = {
-            titlebars_enabled = false
+            fullscreen = true
         }
     }
 
