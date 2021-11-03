@@ -40,6 +40,7 @@ local rules = {
                 "Nitrogen",
                 "Pavucontrol",
                 "Qalculate-gtk",
+                "File-roller",
             },
             -- Note that the name property shown in xprop might be set slightly after creation of the client
             -- and the name shown there might not match defined rules here.
