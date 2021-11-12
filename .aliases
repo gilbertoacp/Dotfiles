@@ -46,3 +46,6 @@ alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
 # remove unused dependencies
 alias clean-pacman='sudo pacman -R $(pacman -Qtdq)'
+
+# rdp
+alias xfreerdp='xfreerdp /bpp:32 /w:1920 /h:1000'

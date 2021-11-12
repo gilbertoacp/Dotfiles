@@ -60,7 +60,7 @@ local global = gears.table.join(
 
     awful.key(
         { modkey }, 
-        "Escape"  , 
+        "Tab"  , 
         awful.tag.history.restore,
         {
             description = "go back", 
