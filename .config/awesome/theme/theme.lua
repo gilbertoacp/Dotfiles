@@ -4,7 +4,7 @@ local gfs          = require("gears.filesystem")
 local themes_path  = gfs.get_themes_dir()
 local colors       = xresources.get_current_theme()
 
-local font_name    = "Roboto"
+local font_name    = "JetBrains"
 local font_size    = "8"
 
 local theme_font             = font_name .. " " ..                         font_size

@@ -1,8 +1,8 @@
 android-studio
 arc-darkest-theme-git
 brave-bin
+cpupower-gui
 mailspring
-polybar
 postman-bin
 robo3t-bin
 simple-mtpfs
@@ -11,5 +11,4 @@ stacer
 ttf-ms-fonts
 ttf-symbola
 visual-studio-code-bin
-yay
 zoom
