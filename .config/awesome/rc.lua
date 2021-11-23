@@ -1,3 +1,4 @@
+pcall(require, "luarocks.loader")
 local awful         = require("awful")
 local beautiful     = require("beautiful")
 local client_signal = require('config.signals.client')
