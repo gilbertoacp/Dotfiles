@@ -1,7 +1,7 @@
 local awful     = require("awful")
 local beautiful = require("beautiful")
-local gears = require("gears")
-local wibox         = require("wibox")
+local gears     = require("gears")
+local wibox     = require("wibox")
 
 local client_signal = {
     ["mouse::enter"] = function(c)
@@ -83,6 +83,12 @@ local client_signal = {
             end)
         end
     end,
+
+    ["manage"] = function (c)
+        c.shape = function(cr,w,h)
+            gears.shape.rounded_rect(cr,w,h,8)
+        end
+    end
 }
 
 return client_signal
