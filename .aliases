@@ -11,6 +11,7 @@ alias ..='cd ..'
 # laravel sail
 alias sail='./vendor/bin/sail'
 
+# if vim isn't installed then use vim as nvim alias
 [ ! -x "/usr/bin/vim" ] && alias vim="nvim"
 
 # Colorize output (good for log files)
@@ -20,6 +21,7 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
+# ssh on kitty 
 [[ $TERMINAL != 'kitty' ]] || alias ssh="kitty +kitten ssh"
 
 # easier to read disk
@@ -45,7 +47,7 @@ alias update='sudo pacman -Syyu'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
 # remove unused dependencies
-alias clean-pacman='sudo pacman -R $(pacman -Qtdq)'
+alias clean-pacman='sudo pacman -R $(pacman -Qtdq) 2>/dev/null || echo "No orphan packages found yet!"'
 
 # rdp
 alias xfreerdp='xfreerdp /bpp:32 /w:1920 /h:1000'

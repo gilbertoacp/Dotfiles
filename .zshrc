@@ -1,13 +1,10 @@
 [[ $- != *i* ]] && return
 
-ZSH_THEME="sorin"
-
-plugins=( git fzf )
-
-DISABLE_UPDATE_PROMPT=true
-
 if [ -d "$HOME/.oh-my-zsh" ]; then
   export ZSH="$HOME/.oh-my-zsh"
+  ZSH_THEME="sorin"
+  plugins=( git fzf )
+  DISABLE_UPDATE_PROMPT=true
   source $ZSH/oh-my-zsh.sh
 fi
 

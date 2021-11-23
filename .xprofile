@@ -20,5 +20,3 @@ lxsession &
 # background image
 nitrogen --restore &
 
-# notification daemon
-dunst &
