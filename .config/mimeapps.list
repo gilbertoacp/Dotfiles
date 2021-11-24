@@ -5,6 +5,7 @@ application/pdf=org.gnome.Evince.desktop
 video/mp4=mpv.desktop
 image/png=sxiv.desktop
 text/plain=leafpad.desktop
+x-scheme-handler/mailspring=Mailspring.desktop
 
 [Added Associations]
 image/jpeg=org.gnome.gThumb.desktop;sxiv.desktop;

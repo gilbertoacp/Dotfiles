@@ -70,7 +70,8 @@ local theme = {
     menu_submenu_icon     = themes_path.."default/submenu.png",
     menu_height           = 0,
     menu_width            = dpi(100),
-    icon_theme            = nil
+    icon_theme            = nil,
+    notification_icon_size = 100
 }
 
 return theme
