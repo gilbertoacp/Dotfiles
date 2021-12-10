@@ -105,7 +105,7 @@ font-1 = UbuntuMono Nerd Font:style=Bold:size=9;2
 ; modules
 modules-left = pulseaudio cpu memory
 modules-center = bspwm  
-modules-right = eth date 
+modules-right = date 
 
 module-margin-left = 1
 module-margin-right = 1
@@ -214,19 +214,6 @@ bar-volume-empty = "─"
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = #666
 
-[module/eth]
-type = internal/network
-interface = eno1
-interval = 3.0
-
-format-padding = 1
-
-format-connected-prefix = 
-format-connected-foreground = ${colors.primary}
-label-connected = "ﯱ Connected" 
-
-format-disconnected =  Disconnected
-format-disconnected-foreground = #666
 
 [module/date]
 type = internal/date

@@ -4,7 +4,7 @@
   Control_R, Up,   Control_R|Button4
   Control_R, Down, Control_R|Button5
 
-"^(Brave-browser|discord|firefox)$"
+"^(Brave-browser|discord)$"
   None, Up, Button4, 3
   None, Down, Button5, 3
 
