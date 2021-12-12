@@ -65,8 +65,9 @@ super + {o,i}
 	bspc wm -h on
 
 # focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+super + {_,shift + }{1-6}
+	bspc {desktop -f,node -d} '^{1-6}'
+	# bspc {desktop -f,node -d} '^{1-9,10}'
 
 # focus the last node/desktop
 super + {grave,Tab}
@@ -100,9 +101,10 @@ super + ctrl + space
 super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
+
 XF86AudioRaiseVolume
 	pactl set-sink-volume @DEFAULT_SINK@ +10%
-
+    
 XF86AudioLowerVolume
   pactl set-sink-volume @DEFAULT_SINK@ -10%
 
