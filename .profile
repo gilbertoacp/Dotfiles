@@ -1,13 +1,13 @@
-# editor 
+# Editor 
 export EDITOR='vim'
 
-# terminal
+# Terminal
 export TERMINAL='kitty'
 
-# browser
+# Browser
 export BROWSER='brave'
 
-# qt
+# Qt
 export QT_STYLE_OVERRIDE=kvantum
 
 # XDG Paths
@@ -15,20 +15,23 @@ export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 
-# java
+# Java
 export JAVA_HOME=/usr/lib/jvm/default
 export PATH=$JAVA_HOME/bin:$PATH
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-# android
+# Android
 export ANDROID_SDK_ROOT=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 
-# composer
+# Composer
 export PATH=$PATH:$HOME/.config/composer/vendor/bin
 
-# local scripts
-export PATH=$HOME/.bin:$PATH
+# Dotnet
+export PATH=$HOME/.dotnet/tools:$PATH
+export DOTNET_CLI_TELEMETRY_OPTOUT=1.
 
+# Local scripts
+export PATH=$HOME/.bin:$PATH
