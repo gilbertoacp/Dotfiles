@@ -13,8 +13,8 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "JetBrainsMono Nerd Font Mono" :size 12 :weight 'regular)
-      doom-variable-pitch-font (font-spec :family "sans" :size 13))
+(setq doom-font (font-spec :family "JetBrainsMono Nerd Font Mono" :size 14 :weight 'regular)
+      doom-variable-pitch-font (font-spec :family "sans" :size 15))
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -42,9 +42,15 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
- (use-package doom-themes
+(use-package doom-themes
   :ensure t
   :config
   (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
         doom-themes-enable-italic t) ; if nil, italics is universally disabled
-  (load-theme 'doom-one t))
+  (load-theme 'doom-monokai-pro t))
+
+(use-package dashboard
+  :ensure t
+  :config
+  (setq dashboard-startup-banner "~/.doom.d/banner.png")
+  (dashboard-setup-startup-hook))
