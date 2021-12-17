@@ -7,6 +7,7 @@ image/png=sxiv.desktop
 text/plain=leafpad.desktop
 x-scheme-handler/mailspring=Mailspring.desktop
 x-scheme-handler/postman=Postman.desktop
+x-scheme-handler/eclipse+command=_usr_lib_dbeaver_.desktop
 
 [Added Associations]
 image/jpeg=org.gnome.gThumb.desktop;sxiv.desktop;
@@ -14,4 +15,4 @@ video/x-matroska=mpv.desktop;
 application/pdf=org.gnome.Evince.desktop;
 video/mp4=mpv.desktop;
 image/png=sxiv.desktop;
-text/plain=leafpad.desktop;
+text/plain=brave-browser.desktop;leafpad.desktop;

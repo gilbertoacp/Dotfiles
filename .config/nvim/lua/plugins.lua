@@ -10,22 +10,31 @@ end
 return require('packer').startup(
   function()
     use 'wbthomason/packer.nvim'
+    
     use 'romgrk/barbar.nvim'
+
     use {
       'glepnir/galaxyline.nvim',
       branch = 'main',
       requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
+
     use {
         'nvim-telescope/telescope.nvim',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+
     use {
         'kyazdani42/nvim-tree.lua',
-        requires = 'kyazdani42/nvim-web-devicons',
-        config = function() require'nvim-tree'.setup {} end
+        requires = 'kyazdani42/nvim-web-devicons'
     }
+
     use 'nvim-treesitter/nvim-treesitter'
+    
+    use 'akinsho/toggleterm.nvim'
+
     use 'joshdick/onedark.vim'
+
+    use 'neovim/nvim-lspconfig'
   end
 )

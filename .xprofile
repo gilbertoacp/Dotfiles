@@ -11,9 +11,6 @@ picom -GC &
 # set keyboard layout to spanish
 setxkbmap es &
 
-# increase mouse wheel speed
-imwheel &
-
 # auth agent
 lxsession &
 

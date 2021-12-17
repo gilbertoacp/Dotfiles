@@ -14,6 +14,11 @@ _G.map('n', '<C-Left>', ':vertical resize -2<CR>')
 _G.map('n', '<C-Right>', ':vertical resize +2<CR>')
 _G.map('n', '<TAB>', ':bnext<CR>')
 _G.map('n', '<S-TAB>', ':bprevious<CR>')
+_G.map('n', '<S-w>', ':bdelete<CR>')
+_G.map('n', '<M-j>', ':resize -2<CR>')
+_G.map('n', '<M-k>', ':resize +2<CR>')
+_G.map('n', '<M-h>', ':vertical -2<CR>')
+_G.map('n', '<M-l>', ':vertical +2<CR>')
 
 -- Visual Mode
 _G.map('v', '<', '<gv')
@@ -24,3 +29,4 @@ _G.map('v', 'J', ':move \'>+2<CR>gv-gv\'')
 
 -- Insert Mode
 _G.map('i', '<expr><TAB>', [[pumvisible() ? "\<C-n>" : "\<TAB>"]])
+
