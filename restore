@@ -7,7 +7,7 @@ function dotfiles() {
     /usr/bin/env git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" "$@"
 }
 
-dotfiles checkout
+dotfiles checkout notebook
 if [ "$?" -ne 0 ]; then
     mkdir -p "$HOME/.dotfiles.bak"
     dotfiles checkout 2>&1 \
