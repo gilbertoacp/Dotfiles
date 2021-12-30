@@ -23,3 +23,8 @@ fi
 
 [ -e ~/.dircolors ] && eval $(dircolors -b ~/.dircolors) ||
     eval $(dircolors -b)
+
+
+function quickUpdate {
+ dotfiles add -u && dotfiles commit -m "update" && dotfiles push 
+}
