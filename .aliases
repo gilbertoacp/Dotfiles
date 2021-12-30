@@ -5,7 +5,7 @@ else
   alias ls='ls --color --icons'
 fi
 
-alias l='ls -lah --group'
+alias ll='ls -lah --group'
 alias ..='cd ..'
 
 # laravel sail

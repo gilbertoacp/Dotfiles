@@ -104,8 +104,8 @@ font-1 = UbuntuMono Nerd Font:style=Bold:size=9;2
 
 ; modules
 modules-left = bspwm 
-modules-center = date 
-modules-right = pulseaudio cpu memory 
+modules-center =  
+modules-right = pulseaudio cpu memory date 
 
 module-margin-left = 0
 module-margin-right = 1
