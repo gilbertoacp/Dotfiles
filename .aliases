@@ -2,10 +2,10 @@
 if [ -x "/usr/bin/exa" ]; then 
   alias ls="exa"
 else
-  alias ls='ls --color'
+  alias ls='ls --color --icons'
 fi
 
-alias l='ls -lah'
+alias l='ls -lah --group'
 alias ..='cd ..'
 
 # laravel sail
