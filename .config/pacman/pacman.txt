@@ -15,6 +15,7 @@ alsa-topology-conf
 alsa-ucm-conf
 alsa-utils
 aom
+appstream-glib
 archlinux-keyring
 argon2
 at-spi2-atk
@@ -41,6 +42,7 @@ bspwm
 btrfs-progs
 bubblewrap
 bzip2
+c-ares
 ca-certificates
 ca-certificates-mozilla
 ca-certificates-utils
@@ -54,6 +56,7 @@ coreutils
 crda
 cryptsetup
 ctags
+ctemplate
 curl
 dav1d
 db
@@ -67,6 +70,7 @@ dhclient
 dialog
 diffutils
 ding-libs
+dkms
 dmenu
 dmidecode
 dmraid
@@ -128,6 +132,7 @@ fuse3
 fzf
 gawk
 gc
+gcab
 gcc
 gcc-libs
 gd
@@ -198,6 +203,7 @@ hwinfo
 hwloc
 hyphen
 iana-etc
+ibus
 icu
 imagemagick
 imath
@@ -291,6 +297,7 @@ libgme
 libgpg-error
 libgsf
 libgudev
+libhandy
 libheif
 libibus
 libice
@@ -452,6 +459,7 @@ lm_sensors
 lmdb
 logrotate
 lsb-release
+lsof
 lsscsi
 lua52
 lua53
@@ -479,6 +487,7 @@ meld
 menu-cache
 mesa
 mesa-utils
+meson
 mjpegtools
 mkinitcpio
 mkinitcpio-busybox
@@ -511,6 +520,7 @@ networkmanager-openvpn
 nfs-utils
 nfsidmap
 nilfs-utils
+ninja
 nitrogen
 nmap
 noto-fonts
@@ -548,7 +558,7 @@ pam
 pambase
 pango
 pangomm
-paper-icon-theme
+papirus-icon-theme
 parallel
 patch
 pavucontrol
@@ -607,17 +617,21 @@ procps-ng
 psmisc
 pv
 python
+python-appdirs
 python-atspi
 python-cairo
 python-colorama
 python-defusedxml
 python-future
 python-gobject
+python-more-itertools
+python-ordered-set
 python-packaging
 python-ply
 python-psutil
 python-pyparsing
 python-pyxdg
+python-setuptools
 python-shtab
 python-six
 python-termcolor
@@ -647,6 +661,7 @@ rubberband
 run-parts
 s-nail
 sbc
+sdl
 sdl2
 sed
 serd
@@ -686,11 +701,13 @@ tcl
 tdb
 texinfo
 thin-provisioning-tools
+tidy
 tldr
 tracker3
 tree-sitter
 tslib
 ttf-bitstream-vera
+ttf-carlito
 ttf-dejavu
 ttf-liberation
 ttf-opensans
@@ -711,6 +728,8 @@ v4l-utils
 vid.stab
 vim
 vim-runtime
+virtualbox
+virtualbox-host-dkms
 vmaf
 vpnc
 vulkan-headers

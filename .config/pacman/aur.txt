@@ -1,1 +1,7 @@
 brave-bin
+cpupower-gui
+mailspring
+onlyoffice-bin
+ttf-ms-fonts
+visual-studio-code-bin
+zoom
