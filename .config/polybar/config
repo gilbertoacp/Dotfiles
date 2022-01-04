@@ -70,7 +70,7 @@ cursor-click = pointer
 ;monitor = ${env:MONITOR:HDMI-1}
 
 width = 100%
-height = 22
+height = 25
 
 ;offset-x = 1%
 ;offset-y = 1%
@@ -100,10 +100,10 @@ fixed-center = true
 ; fonts
 font-0 = JetBrainsMono Nerd Font:style=Bold:size=9;2 
 font-1 = UbuntuMono Nerd Font:style=Bold:size=9;2
-;font-2 = unifont:pixelsize=9;2
+font-2 = unifont:pixelsize=9;2
 
 ; modules
-modules-left = bspwm 
+modules-left = bspwm xwindow
 modules-center =  
 modules-right = pulseaudio cpu memory date 
 
@@ -120,17 +120,18 @@ cursor-click = pointer
 
 [module/bspwm]
 type = internal/bspwm
-ws-icon-default = ""
+;ws-icon-default = ""
 format = <label-state> <label-mode>
 
 label-active = %index%  
 label-active-padding = 1
 label-active-foreground = #2fbbf2
 label-active-background = ${colors.background-wm}
+label-active-underline = ${colors.primary}
 
 label-occupied = %index% 
 label-occupied-padding = 1
-label-occupied-foreground = ${colors.primary}
+label-occupied-foreground = ${colors.secondary}
 
 label-urgent = %index%
 label-urgent-padding = 1
@@ -160,6 +161,14 @@ label-visible = %index%
 ; label-visible-background = ${self.label-focused-background}
 ; label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
+
+format-underline = ${colors.background}
+format-background = ${colors.background}
+format-padding =
 
 [module/memory]
 type = internal/memory

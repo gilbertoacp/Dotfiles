@@ -25,6 +25,6 @@ fi
     eval $(dircolors -b)
 
 
-function quickUpdate {
+function quickUpdate() {
  dotfiles add -u && dotfiles commit -m "update" && dotfiles push 
 }

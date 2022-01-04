@@ -22,7 +22,7 @@ super + shift + r
 	bspc wm -r
 
 # Quit bspwm
-ctrl + shift + Escape
+alt + shift + Escape
   bspc quit
 
 # Close and kill focused window
@@ -100,7 +100,6 @@ super + ctrl + space
 super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
-
 XF86AudioRaiseVolume
 	pactl set-sink-volume @DEFAULT_SINK@ +10%
     
@@ -119,6 +118,3 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
   brightnessctl set -10%
 
-# Hide/Unhide Window
-super + shift + i
-  ~/.bin/winhide

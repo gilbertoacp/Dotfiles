@@ -19,8 +19,3 @@ fi
 
 dotfiles submodule update --recursive --remote
 dotfiles config --local status.showUntrackedFiles no
-
-sudo pacman -S --needed - < $HOME/.config/pacman/pacman.txt
-
-[ -x /usr/bin/yay ] && yay -S --needed --noconfirm - < $HOME/.config/pacman/aur.txt
-

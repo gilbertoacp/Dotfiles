@@ -30,8 +30,9 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$HOME/.config/composer/vendor/bin
 
 # Dotnet
-export PATH=$HOME/.dotnet/tools:$PATH
+export DOTNET_ROOT=/usr/share/dotnet
 export DOTNET_CLI_TELEMETRY_OPTOUT=1.
+export PATH=$DOTNET_ROOT:$PATH
 
 # Local scripts
 export PATH=$HOME/.bin:$PATH
