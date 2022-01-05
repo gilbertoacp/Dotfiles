@@ -8,9 +8,6 @@ xset r rate 210 40
 # compositor
 picom &
 
-# set keyboard layout to spanish
-setxkbmap es &
-
 # auth agent
 lxsession &
 
