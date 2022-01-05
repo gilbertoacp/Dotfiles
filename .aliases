@@ -38,6 +38,7 @@ alias pscpu='ps auxf | sort -nr -k 3 | head -5'
 
 # dotfiles
 alias dotfiles="/usr/bin/env git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+[ -d $HOME/.dotfiles ] && alias quickUpdate="dotfiles add -u && dotfiles commit -m \"update\" && dotfiles push" 
 
 # updates
 alias update='sudo pacman -Syyu'
