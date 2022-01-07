@@ -1,7 +1,5 @@
 brave-bin
-cpupower-gui
+eclipse-java
 mailspring
-onlyoffice-bin
-ttf-ms-fonts
 visual-studio-code-bin
 zoom
