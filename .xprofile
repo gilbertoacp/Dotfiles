@@ -1,18 +1,9 @@
 xset s off
 xset -dpms
 xset s noblank
-
-# increase keyboard typing speed
 xset r rate 210 40
-
-# compositor
 picom &
-
-# auth agent
 lxsession &
-
-# background image
 nitrogen --restore &
-
-# mouse speed wheel
 imwheel &
+[[ $DESKTOP_SESSION == 'dwm' ]] && slstatus &
