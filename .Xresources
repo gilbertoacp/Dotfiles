@@ -1,10 +1,10 @@
-*.normbgcolor: #1e222a 
-*.normbordercolor: #1a1b26 
-*.normfgcolor: #979eab
+*.normbgcolor: #212121 
+*.normbordercolor: #545454
+*.normfgcolor: #eeffff
 
-*.selbgcolor: #2b2f37
-*.selbordercolor: #61afef
-*.selfgcolor: #61afef
+*.selbgcolor: #212121
+*.selbordercolor: #c3e88d
+*.selfgcolor: #ff5370
 
 /* xterm*selectToClipboard: true */
 /* xterm*disallowedWindowOps: 20,21,SetXProp */
@@ -20,33 +20,33 @@
 *cursorColor: #1a1b26 
 
 ! [Dark Colors}
-*color0: #2b2f37
-*color8: #2b2f37
+*color0: #000000
+*color8: #545454
 
 ! [Red] 
-*color1: #e06c75
-*color9: #e06c75 
+*color1: #ff5370
+*color9: #ff5370 
 
 ! [Green] 
-*color2: #98c379
-*color10: #98c379
+*color2: #c3e88d
+*color10: #c3e88d
 
 ! [Yellow] 
-*color3: #e5c07b
-*color11: #e5c07b
+*color3: #ffcb6b
+*color11: #ffcb6b
 
 ! [Blue] 
-*color4: #61afef
-*color12: #61afef
+*color4: #82aaff
+*color12: #82aaff
 
 ! [Magenta] 
-*color5: #9a7ecc
-*color13: #9a7ecc
+*color5: #c792ea
+*color13: #c792ea
 
 ! [Cyan]
-*color6: #56b6c2
-*color14: #56b6c2
+*color6: #89ddff
+*color14: #89ddff
 
 ! [White]
-*color7: #abb2bf 
-*color15: #abb2bf 
+*color7: #ffffff 
+*color15: #ffffff 
