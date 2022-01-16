@@ -1,6 +1,6 @@
 #!/bin/sh
 
-git clone --bare --recursive https://github.com/gilbertoacp/.dotfiles \
+git clone --bare --recursive https://github.com/gilbertoacp/dotfiles \
     "$HOME/.dotfiles"
 
 function dotfiles() {
