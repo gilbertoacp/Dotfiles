@@ -1,5 +1,0 @@
-brave-bin
-eclipse-java
-mailspring
-visual-studio-code-bin
-zoom

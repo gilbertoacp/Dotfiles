@@ -1,7 +1,0 @@
-{
-    "telemetry.telemetryLevel": "off",
-    "editor.fontFamily": "'JetBrainsMono Nerd Font Mono','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "editor.fontLigatures": true,
-    "editor.fontSize": 15,
-    "workbench.colorTheme": "Community Material Theme Darker High Contrast"
-}

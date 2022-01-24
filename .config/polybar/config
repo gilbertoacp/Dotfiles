@@ -26,7 +26,7 @@ height = 22
 
 radius = 0
 
-#bottom = true
+bottom = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -51,7 +51,7 @@ font-1 = UbuntuMono Nerd Font:style=Bold:size=9;2
 
 ; modules
 modules-left = i3 
-modules-center =  
+modules-center = xwindow 
 modules-right = pulseaudio cpu memory date 
 
 module-margin-left = 1

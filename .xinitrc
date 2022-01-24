@@ -55,7 +55,4 @@ xset r rate 210 40
 picom &
 lxsession &
 nitrogen --restore &
-imwheel &
-setxkbmap es
-slstatus &
-exec dwm
+exec i3

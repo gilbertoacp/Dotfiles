@@ -44,7 +44,7 @@ bindsym XF86MonBrightnessUp \
 exec --no-startup-id brightnessctl set +10%
 
 bindsym XF86MonBrightnessDown \
-exec --no-startup-id brightnessctl set -10%
+exec --no-startup-id brightnessctl set 10%-
 
 bindsym XF86AudioPlay \
 exec playerctl play
@@ -223,7 +223,7 @@ bindsym $mod+p \
 exec dmenu_run -nf '#979eab' -nb '#1e222a' -sb '#2b2f37' -sf '#61afef' -fn 'monospace-10' -p 'Run'
 
 bindsym $mod+e \
-exec thunar 
+exec pcmanfm
 
 bindsym $mod+Return \
 exec $TERMINAL
@@ -254,8 +254,8 @@ for_window [class="download"] floating enable
 for_window [class="notification"] floating enable
 for_window [class="Pavucontrol"] floating enable
 
-gaps inner 3
-gaps outer 3
+gaps inner 5
+gaps outer 5
 
 hide_edge_borders none
 
