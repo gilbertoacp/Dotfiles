@@ -4,3 +4,6 @@
 [submodule ".vim"]
 	path = .vim
 	url = https://github.com/gilbertoacp/vimfiles
+[submodule ".config/dwm"]
+	path = .config/dwm
+	url = https://github.com/gilbertoacp/dwm
