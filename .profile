@@ -36,7 +36,3 @@ export PATH=$DOTNET_ROOT:$PATH
 
 # Local scripts
 export PATH=$HOME/.bin:$PATH
-
-if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then 
-    . $HOME/.nix-profile/etc/profile.d/nix.sh; 
-fi 

@@ -20,7 +20,6 @@ bspc config remove_disabled_monitors true
 bspc config merge_overlapping_monitors true
 
 ### floating windows
-bspc rule -a mplayer2 state=floating
 bspc rule -a Nitrogen state=floating
 bspc rule -a Pavucontrol state=floating
 bspc rule -a flameshot state=floating
@@ -30,15 +29,14 @@ bspc rule -a i7z-gui state=floating
 bspc rule -a Sxiv state=floating
 bspc rule -a File-roller state=floating
 bspc rule -a zoom state=floating
-#bspc rule -a Kupfer.py focus=on
-#bspc rule -a Screenkey manage=off
+bspc rule -a Pragha state=floating
+bspc rule -a Eog state=floating
 
 ### tiling windows
 bspc rule -a Emacs state=tiled
 
 ### set workspace apps
-bspc rule -a Brave-browser desktop='^1' follow=on
-bspc rule -a firefox desktop='^1' follow=on
+bspc rule -a obs desktop='^9' follow=on
 
 ### external rules 
 bspc config external_rules_command "$(which external_rules)"
