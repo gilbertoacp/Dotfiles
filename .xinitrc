@@ -42,4 +42,5 @@ nitrogen --restore &
 setxkbmap es &
 imwheel &
 xsetroot -cursor_name left_ptr &
+vmware-user-suid-wrapper &
 exec bspwm

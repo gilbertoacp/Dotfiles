@@ -105,7 +105,7 @@ font-2 = unifont:pixelsize=9;2
 ; modules
 modules-left = bspwm xwindow
 modules-center =  
-modules-right = pulseaudio cpu memory date 
+modules-right = xkeyboard pulseaudio cpu memory date 
 
 module-margin-left = 0
 module-margin-right = 1
@@ -253,5 +253,24 @@ bar-load-empty-foreground = #666
 [module/logo]
 type = custom/text
 content = " "
+
+[module/xkeyboard]
+type = internal/xkeyboard
+format = <label-indicator>
+; Available tokens:
+;   %layout%
+;   %name%
+;   %number%
+;   %icon%
+;   %variant% (New in version 3.6.0)
+; Default: %layout%
+#label-indicator = %layout%
+label-indicator-padding = 2
+label-indicator-background = ${colors.primary}
+label-indicator-foreground = #000
+
+; List of indicators to ignore
+blacklist-0 = num lock
+blacklist-1 = scroll lock
 
 ; vim:ft=dosini

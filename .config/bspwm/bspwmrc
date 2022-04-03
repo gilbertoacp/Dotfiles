@@ -8,7 +8,7 @@ bspc monitor -d 1 2 3 4 5 6 7 8 9
 ### some basic bspwm configuration
 bspc config border_width         1
 bspc config window_gap           1 
-bspc config split_ratio          0.50
+bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config focus_follows_pointer true
@@ -18,6 +18,8 @@ bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
 bspc config remove_disabled_monitors true
 bspc config merge_overlapping_monitors true
+bspc config presel_feedback_color "#82aaff"
+bspc focused_border_color "#82aaff"
 
 ### floating windows
 bspc rule -a Nitrogen state=floating

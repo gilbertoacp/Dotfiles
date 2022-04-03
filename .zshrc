@@ -2,7 +2,7 @@
 
 if [ -d "$HOME/.oh-my-zsh" ]; then
   export ZSH="$HOME/.oh-my-zsh"
-  ZSH_THEME="sorin"
+  ZSH_THEME="gentoo"
   plugins=( git fzf )
   DISABLE_UPDATE_PROMPT=true
   source $ZSH/oh-my-zsh.sh

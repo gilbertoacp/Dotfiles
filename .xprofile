@@ -7,4 +7,4 @@ lxsession &
 nitrogen --restore &
 imwheel &
 setxkbmap es
-[[ $DESKTOP_SESSION == 'dwm' ]] && slstatus &
+vmware-user & 
