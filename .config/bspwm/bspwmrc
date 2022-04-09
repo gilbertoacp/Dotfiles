@@ -5,9 +5,8 @@ launch-polybar bspwm &
 
 bspc monitor -d 1 2 3 4 5 6 7 8 9 
 
-### some basic bspwm configuration
-bspc config border_width         1
-bspc config window_gap           1 
+bspc config border_width         2
+bspc config window_gap           10 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
@@ -20,8 +19,8 @@ bspc config remove_disabled_monitors true
 bspc config merge_overlapping_monitors true
 bspc config presel_feedback_color "#82aaff"
 bspc focused_border_color "#82aaff"
+bspc config gapless_monocle false
 
-### floating windows
 bspc rule -a Nitrogen state=floating
 bspc rule -a Pavucontrol state=floating
 bspc rule -a flameshot state=floating
@@ -33,13 +32,9 @@ bspc rule -a File-roller state=floating
 bspc rule -a zoom state=floating
 bspc rule -a Pragha state=floating
 bspc rule -a Eog state=floating
-
-### tiling windows
 bspc rule -a Emacs state=tiled
-
-### set workspace apps
+bspc rule -a Bitwarden state=floating
 bspc rule -a obs desktop='^9' follow=on
 
-### external rules 
 bspc config external_rules_command "$(which external_rules)"
 
