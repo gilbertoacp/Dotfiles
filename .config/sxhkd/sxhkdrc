@@ -22,7 +22,7 @@ super + shift + r
 	bspc wm -r
 
 # Quit bspwm
-alt + shift + Escape
+ctrl + shift + Escape
   bspc quit
 
 # Close and kill focused window
@@ -72,13 +72,9 @@ super + {_,shift + }{1-9}
 super + {grave,Tab}
 	bspc {node,desktop} -f last
 
-# expand a window by moving one of its side outward
+# Custom resize
 super + alt + {h,j,k,l}
-	bspc node -z {left -40 0,bottom 0 40,top 0 -40,right 40 0} 
-
-# contract a window by moving one of its side inward
-super + alt + shift + {h,j,k,l}
-	bspc node -z {right -40 0,top 0 40,bottom 0 -40,left 40 0} 
+	$HOME/.config/bspwm/helpers/resize {west,south,north,east}
 
 #
 # preselect
