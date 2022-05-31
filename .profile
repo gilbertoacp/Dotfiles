@@ -16,4 +16,5 @@ export PATH=$PATH:$HOME/.config/composer/vendor/bin
 export DOTNET_ROOT=/usr/share/dotnet
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export PATH=$DOTNET_ROOT:$PATH
+export PATH=$HOME/.dotnet/tools:$PATH
 export PATH=$HOME/.bin:$PATH
