@@ -5,3 +5,4 @@ xset r rate 210 40
 imwheel &
 setxkbmap es
 picom &
+nitrogen --restore &
