@@ -1,0 +1,14 @@
+{
+    "Lua.diagnostics.globals": [
+        "terminal",
+        "editor",
+        "editor_cmd",
+        "modkey",
+        "globalkeys",
+        "clientkeys",
+        "clientbuttons",
+        "root",
+        "client",
+        "awesome"
+    ]
+}
