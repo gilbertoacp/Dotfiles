@@ -20,6 +20,7 @@ application/x-extension-shtml=firefox.desktop
 application/xhtml+xml=firefox.desktop
 application/x-extension-xhtml=firefox.desktop
 application/x-extension-xht=firefox.desktop
+text/x-log=xed.desktop
 
 [Added Associations]
 image/jpeg=org.gnome.gThumb.desktop;sxiv.desktop;org.gnome.eog.desktop;
@@ -38,3 +39,6 @@ application/x-extension-shtml=firefox.desktop;
 application/xhtml+xml=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
+application/x-vdi-disk=virtualbox.desktop;
+text/x-log=xed.desktop;
+application/x-virtualbox-vbox=visual-studio-code.desktop;

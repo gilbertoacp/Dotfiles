@@ -45,5 +45,6 @@ bspc rule -a Eog state=floating
 bspc rule -a Emacs state=tiled
 bspc rule -a Bitwarden state=floating
 bspc rule -a obs desktop='^9' follow=on
+
 # - External Rules Command
 bspc config external_rules_command "$HOME/.config/bspwm/helpers/external-rules"

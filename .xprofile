@@ -2,8 +2,6 @@ xset s off
 xset -dpms
 xset s noblank
 xset r rate 210 40
-picom &
-lxsession &
-nitrogen --restore &
 imwheel &
 setxkbmap es
+picom &

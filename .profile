@@ -1,6 +1,6 @@
-export EDITOR='vim'
-export TERMINAL='kitty'
-#export BROWSER='brave'
+export EDITOR="vim"
+export TERMINAL="/usr/bin/kitty"
+export BROWSER="/usr/bin/google-chrome-stable"
 export QT_QPA_PLATFORMTHEME=qt5ct
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
@@ -17,4 +17,6 @@ export DOTNET_ROOT=/usr/share/dotnet
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export PATH=$DOTNET_ROOT:$PATH
 export PATH=$HOME/.dotnet/tools:$PATH
-export PATH=$HOME/.bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
+export GOPATH="$HOME/go"
+export PATH=$GOPATH/bin:$PATH

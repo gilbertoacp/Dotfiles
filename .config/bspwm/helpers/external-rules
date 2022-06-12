@@ -12,6 +12,10 @@ role=$(get_xorg_attribute "WM_WINDOW_ROLE(STRING)")
 [[ "$name" =~ .*"Emulator".* ]] \
     && echo state=floating
 
+
+[[ "$name" =~ .*"Docker Desktop".* ]] \
+    && echo state=floating
+
 [[ "$name" =~ .*"win0".* ]] \
     && echo state=floating
 

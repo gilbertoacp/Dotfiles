@@ -4,9 +4,9 @@
   Control_R, Up,   Control_R|Button4
   Control_R, Down, Control_R|Button5
 
-"^(Brave-browser|discord|Google-chrome|Mailspring)$"
-  None, Up, Button4, 3
-  None, Down, Button5, 3
+"^(Brave-browser|discord|Google-chrome|Chromium-browser|Mailspring)$"
+  None, Up, Button4, 2
+  None, Down, Button5, 2
 
 "^polybar$"
 	None, Up, Button4

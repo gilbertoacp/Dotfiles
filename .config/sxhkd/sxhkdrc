@@ -1,48 +1,43 @@
-
-# Launch terminal emulator
+# launch terminal emulator
 super + Return
 	$TERMINAL
 
-# Program launcher
+# program launcher
 super + p
 	dmenu_run -nf '#979eab' -nb '#1e222a' -sb '#2b2f37' -sf '#61afef' -fn 'monospace-10' -p 'Run'
   
-# Reload sxhkd configuration file
+# reload sxhkd configuration file
 super + Escape
 	pkill -USR1 -x sxhkd
 
-# File explorer
+# file explorer
 super + e
   pcmanfm
 
-### Bspwm Hotkeys ###
-
-# Restart bspwm
+# restart bspwm
 super + shift + r
 	bspc wm -r
 
-# Quit bspwm
+# quit bspwm
 ctrl + shift + Escape
   bspc quit
 
-# Close and kill focused window
+# close and kill focused window
 # super + shift +  {c,q}
 # 	bspc node -{c,k}
 
 super + shift +  q
  	bspc node -c
 
-# Alternate between tiled and monacle layout
+# alternate between tiled and monacle layout
 super + m
 	bspc desktop -l next
-
-### Bspwm window states ###
 
 # set the window state
 super + f
 	bspc node -t {tiled,fullscreen}
 
-# Alternate between floating and tiled layout
+# alternate between floating and tiled layout
 super + shift + space 
 	bspc node -t {floating, tiled}
 
@@ -96,21 +91,30 @@ super + ctrl + space
 super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
+# increase volume
 XF86AudioRaiseVolume
 	pactl set-sink-volume @DEFAULT_SINK@ +10%
     
+# decrease volume
 XF86AudioLowerVolume
   pactl set-sink-volume @DEFAULT_SINK@ -10%
 
+# toggle mute 
 XF86AudioMute
   pactl set-sink-mute @DEFAULT_SINK@ toggle 
 
+# toggle micmute
 XF86AudioMicMute
   pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
+# increase brightness
 XF86MonBrightnessUp
   brightnessctl set +10%
 
+# decrease brightness
 XF86MonBrightnessDown
   brightnessctl set -10%
-
+  
+# take a screenshot with crosshair
+@Print
+  flameshot gui
