@@ -4,5 +4,7 @@ xset s noblank
 xset r rate 210 40
 imwheel &
 setxkbmap es
-picom &
 nitrogen --restore &
+picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 350 &
+
+

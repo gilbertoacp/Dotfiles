@@ -4,7 +4,7 @@ super + Return
 
 # program launcher
 super + p
-	dmenu_run -nf '#979eab' -nb '#1e222a' -sb '#2b2f37' -sf '#61afef' -fn 'monospace-10' -p 'Run'
+  rofi -show drun -theme $HOME/.config/rofi/config
   
 # reload sxhkd configuration file
 super + Escape
@@ -12,7 +12,7 @@ super + Escape
 
 # file explorer
 super + e
-  pcmanfm
+  nautilus
 
 # restart bspwm
 super + shift + r
