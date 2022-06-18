@@ -173,9 +173,7 @@ local global = gears.table.join(
         { modkey }, 
         "Return"  ,
         function () 
-
-            awful.spawn(terminal) 
-
+            awful.spawn(_G.terminal) 
         end,
         {
             description = "open a terminal", 
@@ -214,7 +212,7 @@ local global = gears.table.join(
             group       = "layout"
         }
     ),
-    
+
     awful.key(
         {
             modkey

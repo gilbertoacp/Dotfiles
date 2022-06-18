@@ -1,25 +1,37 @@
 pcall(require, "luarocks.loader")
-local awful         = require("awful")
-local beautiful     = require("beautiful")
-local client_signal = require('config.signals.client')
 
 require("awful.autofocus")
-require('errors')
 
-beautiful.init(require('theme.theme'))
+-- global variables (configuration files)
+_G.terminal   = os.getenv("TERMINAL") or "xterm"
+_G.editor     = os.getenv("EDITOR") or "gedit"
+_G.editor_cmd = terminal .. " -e " .. editor
+_G.modkey     = "Mod4"
+_G.in_error   = false
 
-terminal   = os.getenv("TERMINAL") or "xterm"
-editor     = os.getenv("EDITOR") or "gedit"
-editor_cmd = terminal .. " -e " .. editor
-modkey     = "Mod4"
-awful.layout.layouts = require('config.layouts')
-awful.screen.connect_for_each_screen(require('config.screen'))
-globalkeys = require('config.keys.global')
-clientkeys = require('config.keys.client')
-clientbuttons = require('config.buttons.client')
-root.keys(globalkeys)
-awful.rules.rules = require('config.rules')
+-- load modules
+local awful          = require("awful")
+local beautiful      = require("beautiful")
+local global_keys    = require("config.keys.global")
+local client_signal  = require("config.signals.client")
+local awesome_signal = require("config.signals.awesome")
 
+-- load theme
+beautiful.init(require("theme"))
+
+awful.rules.rules    = require("config.rules")
+awful.layout.layouts = require("config.layouts")
+awful.screen.connect_for_each_screen(require("config.screen"))
+require("awful.autofocus")
+
+_G.root.keys(global_keys)
+
+-- awesome signals
+for name, func in pairs(awesome_signal) do
+    _G.awesome.connect_signal(name, func)
+end
+
+-- client signals
 for name, func in pairs(client_signal) do
-    client.connect_signal(name, func)
+    _G.client.connect_signal(name, func)
 end
