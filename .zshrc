@@ -10,11 +10,17 @@ HISTFILE="$HOME/.cache/.zsh_history"
 
 if [ -d "$HOME/.oh-my-zsh" ]; then
   export ZSH="$HOME/.oh-my-zsh"
-  ZSH_THEME="norm"
+  ZSH_THEME="robbyrussell"
   plugins=( git fzf )
   DISABLE_UPDATE_PROMPT=true
   source $ZSH/oh-my-zsh.sh
 fi
+
+if [[ "$ZSH_THEME" == "spaceship" ]]; then
+  SPACESHIP_PROMPT_ADD_NEWLINE=false 
+  SPACESHIP_PROMPT_SEPARATE_LINE=true
+fi
+
 
 if [ -d "$HOME/.fnm" ]; then
   export PATH=$HOME/.fnm:$PATH
