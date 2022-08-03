@@ -149,13 +149,13 @@ index-sort = true
 pin-workspaces = true
 
 label-focused = %index% 
-label-focused-padding = 2 
+label-focused-padding = 1 
 label-focused-foreground = ${colors.primary}
 #label-focused-background = ${colors.background-wm}
 label-focused-underline =  ${colors.primary}
 
 label-unfocused = %index% 
-label-unfocused-padding = 2
+label-unfocused-padding = 1
 
 label-visible = %index% 
 ; label-visible-background = ${self.label-focused-background}
