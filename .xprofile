@@ -4,5 +4,5 @@ xset s noblank
 xset r rate 210 40
 imwheel &
 setxkbmap es
-picom &
+picom --experimental-backends &
 nitrogen --restore &
