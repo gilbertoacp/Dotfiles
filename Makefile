@@ -3,7 +3,7 @@ sample:
 	echo "${HOME}"
 	echo "${HOME}"
 
-install-zsh:
+install-ohmyzsh:
 	git clone https://github.com/ohmyzsh/ohmyzsh "${HOME}/.oh-my-zsh"
 
 restore:
