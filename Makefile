@@ -16,3 +16,7 @@ restore:
 	fi
 	dotfiles submodule update --recursive --remote
 	dotfiles config --local status.showUntrackedFiles no
+
+backup-pacman:
+	pacman -Qnq > ${PWD}/.config/pacman/pacman.txt
+	pacman -Qqem > ${PWD}/.config/pacman/aur.txt

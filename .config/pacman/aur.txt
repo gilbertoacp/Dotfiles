@@ -1,0 +1,11 @@
+brave-bin
+google-chrome
+kiterunner-bin
+ly
+nessus
+onlyoffice-bin
+postman-bin
+powershell-bin
+rofi-greenclip
+sublime-text-4
+visual-studio-code-bin
