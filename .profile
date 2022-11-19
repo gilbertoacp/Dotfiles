@@ -1,4 +1,4 @@
-export EDITOR="vim"
+export EDITOR="emacs"
 export TERMINAL="/usr/bin/kitty"
 export BROWSER="/usr/bin/google-chrome-stable"
 

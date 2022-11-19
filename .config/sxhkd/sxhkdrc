@@ -4,7 +4,9 @@ super + Return
 
 # program launcher
 super + p
-	dmenu_run -nf '#979eab' -nb '#1e222a' -sb '#2b2f37' -sf '#61afef' -fn 'monospace-10' -p 'Run'
+    rofi -show drun
+#	dmenu_run -nf '#979eab' -nb '#1e222a' -sb '#2b2f37' -sf '#61afef' -fn 'monospace-10' -p 'Run'
+
   
 # reload sxhkd configuration file
 super + Escape
@@ -46,7 +48,7 @@ super + shift + space
 #
 
 # Focus in the given direction
-super + {_,shift + }{h,j,k,l}
+alt + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
 # focus the next/previous window in the current desktop
@@ -118,3 +120,9 @@ XF86MonBrightnessDown
 # take a screenshot with crosshair
 @Print
   flameshot gui
+
+super + period
+    rofi -modi emoji -show emoji 
+    
+super + v
+    rofi -modi "clipboard:greenclip print" -show 

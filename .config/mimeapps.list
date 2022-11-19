@@ -1,7 +1,7 @@
 [Default Applications]
 image/jpeg=org.gnome.eog.desktop
 video/x-matroska=mpv.desktop
-application/pdf=google-chrome.desktop
+application/pdf=epdfview.desktop
 video/mp4=mpv.desktop
 image/png=org.gnome.eog.desktop
 text/plain=org.gnome.gedit.desktop
@@ -26,7 +26,7 @@ image/gif=org.gnome.eog.desktop
 [Added Associations]
 image/jpeg=org.gnome.gThumb.desktop;sxiv.desktop;org.gnome.eog.desktop;
 video/x-matroska=mpv.desktop;
-application/pdf=org.gnome.Evince.desktop;qpdfview.desktop;google-chrome.desktop;
+application/pdf=org.gnome.Evince.desktop;qpdfview.desktop;google-chrome.desktop;epdfview.desktop;
 video/mp4=mpv.desktop;
 image/png=sxiv.desktop;org.gnome.eog.desktop;
 text/plain=brave-browser.desktop;leafpad.desktop;org.gnome.gedit.desktop;

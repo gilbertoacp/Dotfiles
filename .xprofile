@@ -5,4 +5,6 @@ xset r rate 210 40
 imwheel &
 setxkbmap es
 picom --experimental-backends &
+greenclip daemon &
+xsetroot -cursor_name left_ptr &
 nitrogen --restore &

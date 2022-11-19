@@ -12,7 +12,7 @@ alias ..='cd ..'
 alias sail='./vendor/bin/sail'
 
 # Colorize output (good for log files)
-[ -x "/usr/bin/bat" ] && alias cat="bat"
+[ -x "/usr/bin/bat" ] && alias cat="bat --no-paging --style plain"
 
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
@@ -55,3 +55,5 @@ alias xfreerdp='xfreerdp /bpp:32 /w:1920 /h:1000'
 alias urldecode='sed "s@+@ @g;s@%@\\\\x@g" | xargs -0 printf "%b"'
 
 ## qemu-img convert -O vdi gnome.qcow2 gnome.vdi
+#
+alias sysst="sudo systemctl status"
