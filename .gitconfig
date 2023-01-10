@@ -1,7 +1,0 @@
-[user]
-	email = calderongilberto3@gmail.com
-	name = Gilberto
-[init]
-	defaultBranch = master
-[credential]
-	helper = store
