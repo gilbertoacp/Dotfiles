@@ -1,6 +1,0 @@
-eww-wayland
-google-chrome
-hyprland
-ly
-spotify
-visual-studio-code-bin
